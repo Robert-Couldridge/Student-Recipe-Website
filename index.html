@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Easy, budget-friendly recipes for students. Learn to cook quick and healthy meals with simple ingredients.">
+    <title>Student Cooking Hub - Easy Recipes for Students</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
+    <style>
+        /* Example inline styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #34495e;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .hero {
+            background-image: url('hero-image.jpg'); /* Replace with a hero image */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3em;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+        }
+        .container {
+            padding: 20px;
+        }
+        .recipes, .tips {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .card {
+            background-color: white;
+            margin: 10px;
+            padding: 20px;
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Student Cooking Hub</h1>
+        <p>Your go-to resource for easy, budget-friendly recipes</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="#recipes">Popular Recipes</a>
+        <a href="#tips">Cooking Tips</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Cook Smart, Eat Well</h1>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Popular Recipes Section -->
+        <section id="recipes">
+            <h2>Popular Recipes</h2>
+            <div class="recipes">
+                <!-- Recipe 1 -->
+                <div class="card">
+                    <img src="recipe1.jpg" alt="Recipe 1"> <!-- Replace with an image -->
+                    <h3>Easy Pasta</h3>
+                    <p>A quick pasta recipe that only takes 15 minutes!</p>
+                    <a href="#">View Recipe</a>
+                </div>
+                <!-- Recipe 2 -->
+                <div class="card">
+                    <img src="recipe2.jpg" alt="Recipe 2">
+                    <h3>Avocado Toast</h3>
+                    <p>Healthy and delicious avocado toast in just 5 minutes.</p>
+                    <a href="#">View Recipe</a>
+                </div>
+                <!-- Recipe 3 -->
+                <div class="card">
+                    <img src="recipe3.jpg" alt="Recipe 3">
+                    <h3>One-Pot Chili</h3>
+                    <p>A hearty meal perfect for any student.</p>
+                    <a href="#">View Recipe</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cooking Tips Section -->
+        <section id="tips">
+            <h2>Quick Cooking Tips</h2>
+            <div class="tips">
+                <div class="card">
+                    <h3>Meal Prep Basics</h3>
+                    <p>Learn how to prepare meals ahead of time to save time during the week.</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="card">
+                    <h3>Budget-Friendly Ingredients</h3>
+                    <p>Discover ingredients that are healthy, cheap, and versatile.</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="card">
+                    <h3>Healthy Eating on a Budget</h3>
+                    <p>Tips for balancing nutrition and cost-effectiveness.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup Section -->
+        <section id="newsletter">
+            <h2>Join Our Newsletter</h2>
+            <p>Sign up to receive the latest recipes and cooking tips right in your inbox!</p>
+            <form action="#" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Student Cooking Hub. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
