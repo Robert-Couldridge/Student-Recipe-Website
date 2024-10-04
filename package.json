@@ -1,0 +1,11 @@
+{
+  "name": "Student-Recipe-Website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Robert-Couldridge/Student-Recipe-Website.git",
+  "author": "614907580 <robert.couldridge@bt.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
