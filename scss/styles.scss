@@ -3,35 +3,55 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #4d443d;
 }
 header {
-    background-color: #2c3e50;
+    background-color: #a7001a;
     color: white;
-    padding: 20px 0;
+    padding: 1px 0;
     text-align: center;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    background-color: #34495e;
-    padding: 10px;
+    background-color: #040c0f;
     .navbar-brand {
         font-family: "Anton", sans-serif;
         font-weight: 400;
         font-style: normal;
+        color: azure;
     }     
-
+    .navbar-brand:hover {
+        color: #f8b645;
+    }
+    .nav-link {
+        color: azure;
+    }
+    .nav-link:hover {
+        color: #f8b645;
+    }
+    .btn-outline-success {
+        color: azure;
+        border-color: azure 
+    }
+    .navbar-toggler, .navbar-toggler:focus, .navbar-toggler:active {
+        outline: none;
+        box-shadow: none;
+    }
+    .navbar-toggler-icon {
+        filter: invert(1);
+    }
     ul li a i {
-    margin-right: 4px;
+        margin-right: 4px;
+        color: #f8b645;
     }
 
 }
 
 nav a {
     color: white;
-    margin: 0 15px;
+    margin: 0 4px;
     text-decoration: none;
 }
 .hero {
@@ -70,7 +90,7 @@ nav a {
     height: auto;
 }
 footer {
-    background-color: #2c3e50;
+    background-color: #a7001a;
     color: white;
     text-align: center;
     padding: 20px 0;
