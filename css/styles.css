@@ -9839,6 +9839,9 @@ nav .navbar-brand {
 nav .navbar-brand:hover {
   color: #f8b645;
 }
+nav .image-container {
+  filter: invert(1);
+}
 nav .nav-link {
   color: azure;
 }
