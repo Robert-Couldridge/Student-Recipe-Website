@@ -1,0 +1,57 @@
+header {
+    nav {
+        background-color: $primary-black;
+        display: flex;
+        justify-content: center;
+        background-color: $primary-black;
+        a.nav-link {
+            color: $primary-azure;
+        }
+        a.nav-link:hover {
+            color: $primary-yellow;
+        }
+        a.nav-link:active {
+            text-transform: uppercase;
+            font-weight: 500;
+            color: $primary-yellow;
+        }
+        .navbar-brand {
+            font-family: "Anton", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: $primary-azure;
+        }     
+        .navbar-brand:hover {
+            color: $primary-yellow;
+        }
+        .image-container {
+            filter: invert(1);
+        }
+        .btn-outline-success {
+            color: $primary-azure;
+            border-color: $primary-azure;
+        }
+        .btn-outline-success:hover {
+            color: $primary-black;
+            background-color: $primary-yellow;
+            border-color: $primary-black;
+        }
+        .navbar-toggler, .navbar-toggler:focus, .navbar-toggler:active {
+            outline: none;
+            box-shadow: none;
+        }
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+        ul li a i {
+            margin-right: 4px;
+            color: $primary-yellow;
+        }
+
+    }
+    nav a {
+        color: $primary-azure;
+        margin: 0 4px;
+        text-decoration: none;
+    }
+}

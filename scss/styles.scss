@@ -1,62 +1,28 @@
+// Abstracts
+@import "abstracts/variables";
+
+// Vendors
 @import "vendors/bootstrap";
+
+// Base
+
+
+// Layout
+@import "layout/header";
+@import "layout/navigation";
+
+// Components
+
+// Pages
+
+// Themes
+@import "themes/theme";
 
 body {
     margin: 0;
     padding: 0;
-    background-color: #4d443d;
-}
-header {
-    background-color: #a7001a;
-    color: white;
-    padding: 1px 0;
-    text-align: center;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #040c0f;
-    .navbar-brand {
-        font-family: "Anton", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        color: azure;
-    }     
-    .navbar-brand:hover {
-        color: #f8b645;
-    }
-    .image-container {
-        filter: invert(1);
-    }
-    .nav-link {
-        color: azure;
-    }
-    .nav-link:hover {
-        color: #f8b645;
-    }
-    .btn-outline-success {
-        color: azure;
-        border-color: azure 
-    }
-    .navbar-toggler, .navbar-toggler:focus, .navbar-toggler:active {
-        outline: none;
-        box-shadow: none;
-    }
-    .navbar-toggler-icon {
-        filter: invert(1);
-    }
-    ul li a i {
-        margin-right: 4px;
-        color: #f8b645;
-    }
-
-}
-
-nav a {
-    color: white;
-    margin: 0 4px;
-    text-decoration: none;
-}
+    background-color: $primary-grey;
+} 
 .hero {
     background-image: url('hero-image.jpg'); /* Replace with a hero image */
     background-size: cover;
@@ -93,7 +59,7 @@ nav a {
     height: auto;
 }
 footer {
-    background-color: #a7001a;
+    background-color: $primary-red;
     color: white;
     text-align: center;
     padding: 20px 0;
