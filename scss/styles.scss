@@ -10,6 +10,7 @@
 // Layout
 @import "layout/header";
 @import "layout/navigation";
+@import "layout/footer";
 
 // Components
 
@@ -60,12 +61,7 @@ body {
     max-width: 100%;
     height: auto;
 }
-footer {
-    background-color: $primary-red;
-    color: $primary-azure;
-    text-align: center;
-    padding: 20px 0;
-}
+
 
 /* these are there for activity 10 */
 

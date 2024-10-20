@@ -4,6 +4,11 @@ header {
         display: flex;
         justify-content: center;
         background-color: $primary-black;
+        a {
+            color: $primary-azure;
+            margin: 0 4px;
+            text-decoration: none;
+        }
         a.nav-link {
             color: $primary-azure;
         }
@@ -11,8 +16,6 @@ header {
             color: $primary-yellow;
         }
         a.nav-link:active {
-            text-transform: uppercase;
-            font-weight: 500;
             color: $primary-yellow;
         }
         .navbar-brand {
@@ -48,10 +51,5 @@ header {
             color: $primary-yellow;
         }
 
-    }
-    nav a {
-        color: $primary-azure;
-        margin: 0 4px;
-        text-decoration: none;
     }
 }

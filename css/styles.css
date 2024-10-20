@@ -9828,6 +9828,11 @@ header nav {
   justify-content: center;
   background-color: #040c0f;
 }
+header nav a {
+  color: #f0ffff;
+  margin: 0 4px;
+  text-decoration: none;
+}
 header nav a.nav-link {
   color: #f0ffff;
 }
@@ -9835,8 +9840,6 @@ header nav a.nav-link:hover {
   color: #f8b645;
 }
 header nav a.nav-link:active {
-  text-transform: uppercase;
-  font-weight: 500;
   color: #f8b645;
 }
 header nav .navbar-brand {
@@ -9871,10 +9874,14 @@ header nav ul li a i {
   margin-right: 4px;
   color: #f8b645;
 }
-header nav a {
+
+footer {
+  background-color: #a7001a;
   color: #f0ffff;
-  margin: 0 4px;
-  text-decoration: none;
+  padding: 20px 0;
+}
+footer p {
+  font-size: 0.9rem;
 }
 
 * {
@@ -9924,13 +9931,6 @@ body {
 .card img {
   max-width: 100%;
   height: auto;
-}
-
-footer {
-  background-color: #a7001a;
-  color: #f0ffff;
-  text-align: center;
-  padding: 20px 0;
 }
 
 /* these are there for activity 10 */
