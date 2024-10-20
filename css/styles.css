@@ -9819,7 +9819,7 @@ header {
   text-align: center;
 }
 header .page-header-top {
-  padding: 40px 40px 40px 0;
+  padding: -200 -200 -200 0;
 }
 
 header nav {
@@ -9877,9 +9877,12 @@ header nav a {
   text-decoration: none;
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
+}
+
+body {
   background-color: #4d443d;
 }
 
@@ -9887,18 +9890,17 @@ body {
   background-image: url("hero-image.jpg"); /* Replace with a hero image */
   background-size: cover;
   background-position: center;
-  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #f0ffff;
   text-align: center;
+  font-family: "Pinyon Script", cursive;
 }
 
 .hero h1, .hero .h1 {
-  font-size: 3em;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px 20px;
+  font-size: 2.5rem;
+  padding: 50px;
 }
 
 .container {
@@ -9911,8 +9913,8 @@ body {
   justify-content: space-between;
 }
 
-.card {
-  background-color: white;
+.card, .col-sm-4 {
+  background-color: #f0ffff;
   margin: 10px;
   padding: 20px;
   width: 30%;
@@ -9926,7 +9928,7 @@ body {
 
 footer {
   background-color: #a7001a;
-  color: white;
+  color: #f0ffff;
   text-align: center;
   padding: 20px 0;
 }

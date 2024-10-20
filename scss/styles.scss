@@ -18,37 +18,39 @@
 // Themes
 @import "themes/theme";
 
-body {
+* { 
     margin: 0;
     padding: 0;
+}
+
+body {
     background-color: $primary-grey;
 } 
 .hero {
     background-image: url('hero-image.jpg'); /* Replace with a hero image */
     background-size: cover;
     background-position: center;
-    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: $primary-azure;
     text-align: center;
+    font-family: "Pinyon Script", cursive;
 }
 .hero h1 {
-    font-size: 3em;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
+    font-size: 2.5rem;
+    padding: 50px;
 }
 .container {
     padding: 20px;
 }
-.recipes, .tips {
+.recipes, .tips { 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.card {
-    background-color: white;
+.card, .col-sm-4 {
+    background-color: $primary-azure;
     margin: 10px;
     padding: 20px;
     width: 30%;
@@ -60,7 +62,7 @@ body {
 }
 footer {
     background-color: $primary-red;
-    color: white;
+    color: $primary-azure;
     text-align: center;
     padding: 20px 0;
 }

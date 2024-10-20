@@ -13,13 +13,24 @@ async function fetchData() {
 
 function displayData(data){
     const container = document.getElementById('next-race');
-    
+    container.className = 'container-fluid'
+
     const races = data.MRData.RaceTable.Races; // Extract races from the JSON
 
+    let racecount = 0;
+    let raceRow; 
+
     races.forEach(race => {
+
+
+        if (racecount % 3 === 0) {
+            raceRow = document.createElement('div');
+            raceRow.className = 'row';
+        }
+
         // Create a div for each race
         const raceDiv = document.createElement('div');
-        raceDiv.className = 'race';
+        raceDiv.className = 'col-sm-4';
 
         // Create an HTML structure for each race
         raceDiv.innerHTML = `
@@ -27,12 +38,16 @@ function displayData(data){
             <p><strong>Circuit:</strong> ${race.Circuit.circuitName}</p>
             <p><strong>Location:</strong> ${race.Circuit.Location.locality}, ${race.Circuit.Location.country}</p>
             <p><strong>Race Date:</strong> ${race.date} at ${race.time}</p>
-            <p><strong>First Practice:</strong> ${race.FirstPractice.date} at ${race.FirstPractice.time}</p>
             <p><strong>Qualifying:</strong> ${race.Qualifying.date} at ${race.Qualifying.time}</p>
             `;
 
         // Append the race div to the container
-        container.appendChild(raceDiv);
+        raceRow.appendChild(raceDiv);
+        racecount++;
+
+        if (racecount % 3 === 2) {
+            container.appendChild(raceRow);
+        }
 
 });
 }
