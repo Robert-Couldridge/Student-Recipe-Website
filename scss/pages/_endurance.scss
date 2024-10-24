@@ -1,0 +1,23 @@
+body#page-endurance{
+    .hypercar-image{
+        border: solid 2px $primary-azure;
+        height: 150px;
+        width: 220px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .hypercar-image:hover{
+        transform: scale(1.05);
+    }
+    .hypercar-lightbox{
+        display: block;
+        height: 150px;
+    }
+    h2{
+        color: $primary-azure;
+    }
+}

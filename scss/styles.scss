@@ -3,6 +3,7 @@
 
 // Vendors
 @import "vendors/bootstrap";
+@import "../node_modules/lightbox2/dist/css/lightbox.min.css";
 
 // Base
 
@@ -16,17 +17,27 @@
 
 // Pages
 @import "pages/login";
+@import "pages/endurance";
 
 // Themes
 @import "themes/theme";
+
+
 
 * { 
     margin: 0;
     padding: 0;
 }
-
+header{
+    background-image: url(../images/ferrari-f1-75-2022.gif);
+    background-size: cover;
+    background-position: center;
+    h1, p {
+        text-shadow: 2px 2px 2px $primary-grey;
+    }
+}
 body {
-    background-color: $primary-grey;
+    background-color: $primary-black;
 } 
 .hero {
     background-image: url('hero-image.jpg'); /* Replace with a hero image */
@@ -62,6 +73,7 @@ body {
     max-width: 100%;
     height: auto;
 }
+
 
 
 /* these are there for activity 10 */
