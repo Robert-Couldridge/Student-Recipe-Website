@@ -9884,6 +9884,36 @@ footer p {
   font-size: 0.9rem;
 }
 
+body#page-login #login-h2, body#page-login #reg-h2 {
+  color: #f0ffff;
+  margin-left: 20px;
+}
+body#page-login form label {
+  color: #f0ffff;
+}
+body#page-login #reg-form {
+  background-color: #f8b645;
+  padding: 10px;
+  border-radius: 1px;
+  margin: 20px;
+}
+body#page-login #reg-form label {
+  color: #4d443d;
+}
+body#page-login #reg-form .btn {
+  background-color: #4d443d;
+  color: #f8b645;
+  border: 0;
+  margin-top: 10px;
+}
+body#page-login #login-form {
+  margin: 20px;
+}
+body#page-login #login-form .btn {
+  background-color: #f0ffff;
+  margin-top: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;

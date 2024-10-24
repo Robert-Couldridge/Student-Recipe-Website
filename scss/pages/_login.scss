@@ -1,0 +1,33 @@
+body#page-login{
+    #login-h2, #reg-h2 {
+        color: $primary-azure;
+        margin-left: 20px;
+    }
+    form {
+        label{
+            color: $primary-azure;
+        }
+    }    
+    #reg-form {
+        background-color: $primary-yellow;
+        padding: 10px;
+        border-radius: 1px;
+        label {
+            color: $primary-grey;
+        }
+        .btn {
+            background-color: $primary-grey;
+            color: $primary-yellow;
+            border: 0;
+            margin-top: 10px;
+        }
+        margin: 20px;
+    }
+    #login-form {
+        .btn {
+            background-color: $primary-azure;
+            margin-top: 10px;
+        }
+        margin: 20px;
+    }
+}
