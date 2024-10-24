@@ -39,6 +39,9 @@ header{
 body {
     background-color: $primary-black;
 } 
+h2{
+    color: $primary-azure;
+}
 .hero {
     background-image: url('hero-image.jpg'); /* Replace with a hero image */
     background-size: cover;

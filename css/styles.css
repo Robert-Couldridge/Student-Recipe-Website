@@ -9953,6 +9953,10 @@ body {
   background-color: #040c0f;
 }
 
+h2, .h2 {
+  color: #f0ffff;
+}
+
 .hero {
   background-image: url("hero-image.jpg"); /* Replace with a hero image */
   background-size: cover;
