@@ -12,10 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a81ae266e9.js" crossorigin="anonymous"></script>
 </head>
-<body id="page-login">
-
-    <!-- Header Section -->
-    <header>
+<header>
         <div class="page-header-top">
             <h1>Scuderia Ferrari Parts Store</h1>
             <p>tracking, ordering and specifications all in one place</p>
@@ -28,7 +25,7 @@
         <!-- Navigation Menu -->
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="image-container" href="index.html"><img src="./images/Prancing_horse.svg" alt="Prancing_horse" height="30" width="30"></a>
+                <a class="image-container" href="index.php?p=home"><img src="./images/Prancing_horse.svg" alt="Prancing_horse" height="30" width="30"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     <script type="text/javascript" src=".\node_modules\bootstrap\dist\js\bootstrap.min.js"></script>
@@ -37,16 +34,16 @@
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html"><i class="fa-solid fa-gauge-high"></i>Home</a>
+                            <a class="nav-link" href="index.php?p=home"><i class="fa-solid fa-gauge-high"></i>Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="formula1.html"><i class="fa-solid fa-oil-can"></i>Formula 1</a>
+                            <a class="nav-link" href="index.php?p=formula1"><i class="fa-solid fa-oil-can"></i>Formula 1</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="endurance.html"><i class="fa-solid fa-gas-pump"></i>Endurance</a>
+                            <a class="nav-link" href="index.php?p=endurance"><i class="fa-solid fa-gas-pump"></i>Endurance</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login.html"><i class="fa-solid fa-fingerprint"></i>Login/Register</a>
+                            <a class="nav-link" href="index.php?p=login"><i class="fa-solid fa-fingerprint"></i>Login/Register</a>
                         </li>
                     </ul>
                     <form action="search.html" method="get" class="d-flex">
@@ -57,46 +54,4 @@
             </div>
             
         </nav>
-    </header>
-    <div class="row">
-        <div class="col-md-6">
-            <h2 id="login-h2">Login</h2>
-            <form id="login-form" method="post" action="">
-                <div class="form-group">
-                    <label for="login_email">Email Address</label>
-                    <input type="email" class="form-control" id="login_email" name="email">
-                </div>
-                <div class="form-group">
-                    <label for="login_password">Password</label>
-                    <input type="password" class="form-control" id="login_password" name="password">
-                </div>
-                <button type="submit" class="btn btn-ferrari">Login</button>
-            </form>
-        </div>
-        <div class="col-md-6">
-            <h2 id="reg-h2">Register</h2>
-            <form id="reg-form" method="post" action="">
-                <div class="form-group">
-                    <label for="reg_email">Email Address</label>
-                    <input type="email" class="form-control" id="reg_email" name="email">
-                </div>
-                <div class="form-group">
-                    <label for="reg_password">Password</label>
-                    <input type="password" class="form-control" id="reg_password" name="password">
-                </div>
-                <div class="form-group">
-                    <label for="reg_password_confirm">Confirm Password</label>
-                    <input type="password" class="form-control" id="reg_password_confirm" name="password_confirm">
-                </div>
-                <button type="submit" class="btn btn-ferrari">Login</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Footer Section -->
-    <footer class="text-center">
-        <p>This is a test site, none of the used assets are owned by the site owners</p>
-    </footer>
-
-</body>
-</html>
+</header>
