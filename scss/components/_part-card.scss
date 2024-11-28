@@ -1,10 +1,10 @@
 .part-card {
 margin: 0 0 30px 0;
-background-color: #fff;
+background-color: $white;
 box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.15);
 padding: 12px;
 text-align: center;
-border: solid 1px #eaeaea;
+border: solid 1px $primary-azure;
 border-radius: 3px;
 a {
     color: $primary-grey;
@@ -16,9 +16,8 @@ a {
     }
 }
 }
-.part-card:hover{
+.part-card-image:hover{
     transform: scale(1.05);
-    background-color: $primary-black;
 }
 .part-card-image {
 height: 200px;

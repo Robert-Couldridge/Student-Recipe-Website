@@ -1,13 +1,28 @@
 <?php
 $Part = new Part($Conn);
 $parts = $Part->getAllParts();
+$Driver = new Driver($Conn);
+$drivers = $Driver->getAllDrivers();
 ?>
 
 <body id="formula1">
 
-    <!-- Main Content -->
     <div class="container">
-        <h2>Parts</h2>
+        <h2>Formula 1 Drivers</h2>
+
+        <div class="row">
+            <?php foreach($drivers as $driver) { ?>
+                <div class="col-md-6">
+                    </div class="driver-card">
+                        <img class="driver-card-image" src="./images/<?php echo $driver['driver_image'];?>">
+                        <a href="recipes.html"><h3><?php echo $driver['driver_name'];?></h3></a>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Formula 1 Parts</h2>
 
         <div class="row">
             <?php foreach($parts as $part) { ?>
