@@ -16,6 +16,10 @@ a {
     }
 }
 }
+.part-card:hover{
+    transform: scale(1.05);
+    background-color: $primary-black;
+}
 .part-card-image {
 height: 200px;
 background-repeat: no-repeat;
@@ -25,4 +29,12 @@ a {
     display: block;
     height: 200px;
 }
+}
+
+.part-card-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $primary-grey;
 }

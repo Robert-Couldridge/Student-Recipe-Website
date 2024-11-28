@@ -34,7 +34,7 @@ header{
     background-size: cover;
     background-position: center;
     h1, p {
-        text-shadow: 2px 2px 2px $primary-grey;
+        text-shadow: 2px 2px 2px $primary-azure;
     }
 }
 body {
@@ -78,6 +78,12 @@ h2{
     height: auto;
 }
 
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 
 /* these are there for activity 10 */

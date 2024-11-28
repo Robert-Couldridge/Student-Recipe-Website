@@ -9904,6 +9904,11 @@ footer p {
   margin: 0;
 }
 
+.part-card:hover {
+  transform: scale(1.05);
+  background-color: #040c0f;
+}
+
 .part-card-image {
   height: 200px;
   background-repeat: no-repeat;
@@ -9913,6 +9918,14 @@ footer p {
 .part-card-image a {
   display: block;
   height: 200px;
+}
+
+.part-card-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #4d443d;
 }
 
 body#page-login #login-h2, body#page-login #reg-h2 {
@@ -9973,7 +9986,7 @@ header {
   background-position: center;
 }
 header h1, header .h1, header p {
-  text-shadow: 2px 2px 2px #4d443d;
+  text-shadow: 2px 2px 2px #f0ffff;
 }
 
 body {
@@ -10022,6 +10035,13 @@ h2, .h2 {
 .card img {
   max-width: 100%;
   height: auto;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* these are there for activity 10 */

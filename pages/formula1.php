@@ -7,16 +7,18 @@ $parts = $Part->getAllParts();
 
     <!-- Main Content -->
     <div class="container">
-        <h1 class="mb-4 pb-2">Parts</h1>
+        <h2>Parts</h2>
 
         <div class="row">
             <?php foreach($parts as $part) { ?>
                 <div class="col-md-3">
                     <div class="part-card">
-                        <div class="part-card-image" style="background-image: url('./images/front_disc.jpg');">
-                        </div>
+                        <img class="part-card-image" src="./images/<?php echo $part['part_image'];?>">
+                        <a href="recipes.html"><h3><?php echo $part['part_name'];?></h3></a>
+                    </div>
                 </div>
             <?php } ?>
+            </div>
     </div>
     <div class="container">
         <section id="next-race">
