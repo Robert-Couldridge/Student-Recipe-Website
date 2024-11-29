@@ -10016,8 +10016,30 @@ body#page-endurance .hypercar-lightbox {
   height: 150px;
 }
 
-body#driver .li {
-  background-color: #fff;
+body#driver .driver-name {
+  padding-bottom: 20px;
+}
+body#driver .driver-stats-list {
+  list-style-type: none;
+  font-size: 1.2rem;
+}
+body#driver .driver-stats-list li {
+  color: #fff;
+}
+body#driver .driver-stats-table {
+  color: #fff;
+  font-size: 1.1rem;
+  background-color: #4d443d;
+  width: 80%;
+  text-align: center;
+}
+body#driver .driver-stats-table th {
+  height: 20px;
+  border-bottom: 1px solid #fff;
+}
+body#driver .driver-stats-table td {
+  height: 80px;
+  font-size: 2.2rem;
 }
 
 * {
@@ -10031,7 +10053,7 @@ header {
   background-position: center;
 }
 header h1, header .h1, header p {
-  text-shadow: 2px 2px 2px #f0ffff;
+  text-shadow: 2px 2px 2px #040c0f;
 }
 
 body {

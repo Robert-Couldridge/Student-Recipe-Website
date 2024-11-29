@@ -15,9 +15,9 @@ $drivers = $Driver->getAllDrivers();
                 <div class="col-md-6">
                     <div class="driver-card">
                         <a href="index.php?p=driver&id=<?php echo $driver['driver_id']; ?>">
-                            <img class="driver-card-image" src="./images/<?php echo $driver['driver_image'];?>">
+                            <img class="driver-card-image" src="./images/<?php echo $driver['image'];?>">
                         </a>
-                        <a href="index.php?p=driver&id=<?php echo $driver['driver_id']; ?>"><h3><?php echo $driver['driver_name'];?></h3></a>
+                        <a href="index.php?p=driver&id=<?php echo $driver['driver_id']; ?>"><h3><?php echo $driver['name'];?></h3></a>
                     </div>
                 </div>
             <?php } ?>
@@ -42,16 +42,6 @@ $drivers = $Driver->getAllDrivers();
             <h2>Formula 1 Race Calendar</h2>
             <div class="next-race"></div>
             <script src="src/js/next_race.js"></script>
-        </section>
-
-        <!-- Newsletter Signup Section -->
-        <section id="newsletter">
-            <h2>Join Our Newsletter</h2>
-            <p>Sign up to receive the latest recipes and cooking tips right in your inbox!</p>
-            <form action="#" method="POST">
-                <input type="email" name="email" placeholder="Enter your email" required>
-                <button type="submit">Subscribe</button>
-            </form>
         </section>
     </div>
 </body>
