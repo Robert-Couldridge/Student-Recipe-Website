@@ -10016,6 +10016,10 @@ body#page-endurance .hypercar-lightbox {
   height: 150px;
 }
 
+body#driver .li {
+  background-color: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
