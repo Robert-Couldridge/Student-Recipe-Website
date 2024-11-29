@@ -13,9 +13,9 @@ $drivers = $Driver->getAllDrivers();
         <div class="row">
             <?php foreach($drivers as $driver) { ?>
                 <div class="col-md-6">
-                    </div class="driver-card">
-                        <img class="driver-card-image" src="./images/<?php echo $driver['driver_image'];?>">
-                        <a href="recipes.html"><h3><?php echo $driver['driver_name'];?></h3></a>
+                    <div class="driver-card">
+                        <img class="driver-card-image" href="index.php?p=driver&id=<?php echo $driver['driver_id']; ?>" src="./images/<?php echo $driver['driver_image'];?>">
+                        <a href="index.php?p=driver&id=<?php echo $driver['driver_id']; ?>"><h3><?php echo $driver['driver_name'];?></h3></a>
                     </div>
                 </div>
             <?php } ?>
@@ -33,7 +33,7 @@ $drivers = $Driver->getAllDrivers();
                     </div>
                 </div>
             <?php } ?>
-            </div>
+        </div>
     </div>
     <div class="container">
         <section id="next-race">

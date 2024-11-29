@@ -13,4 +13,13 @@
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
+
+        public function getDriverById($driver_id){
+            $query = "SELECT * FROM drivers WHERE driver_id = :driver_id";
+            $stmt = $this->Conn->prepare($query);
+            $stmt->execute([
+                "driver_id" => $driver_id
+                ]);
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
     }
