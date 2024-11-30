@@ -1,4 +1,27 @@
+<?php
+$Part = new Part($Conn);
+$parts = $Part->getAllParts();
+$Driver = new Driver($Conn);
+$drivers = $Driver->getDriversByDiscipline("Endurance");
+?>
+
 <body id="page-endurance">
+    <div class="container">
+        <h2>Endurance Drivers</h2>
+
+        <div class="row">
+            <?php foreach($drivers as $driver) { ?>
+                <div class="col-md-4">
+                    <div class="driver-card">
+                        <a href="index.php?p=driver&id=<?php echo $driver['driver_id']; ?>">
+                            <img class="driver-card-image" src="./images/<?php echo $driver['image'];?>">
+                        </a>
+                        <a href="index.php?p=driver&id=<?php echo $driver['driver_id']; ?>"><h3><?php echo $driver['name'];?></h3></a>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-6">

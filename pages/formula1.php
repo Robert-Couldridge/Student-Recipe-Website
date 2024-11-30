@@ -2,7 +2,7 @@
 $Part = new Part($Conn);
 $parts = $Part->getAllParts();
 $Driver = new Driver($Conn);
-$drivers = $Driver->getAllDrivers();
+$drivers = $Driver->getDriversByDiscipline("Formula 1");
 ?>
 
 <body id="formula1">

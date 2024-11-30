@@ -22,4 +22,13 @@
                 ]);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
+
+        public function getDriversByDiscipline($discipline){
+            $query = "SELECT * FROM drivers WHERE discipline = :discipline";
+            $stmt = $this->Conn->prepare($query);
+            $stmt->execute([
+                "discipline" => $discipline
+                ]);
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
     }

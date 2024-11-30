@@ -10016,6 +10016,10 @@ body#page-endurance .hypercar-lightbox {
   height: 150px;
 }
 
+body#driver .driver_full_length_image {
+  height: 830px;
+  width: 600px;
+}
 body#driver .driver-name {
   padding-bottom: 20px;
 }

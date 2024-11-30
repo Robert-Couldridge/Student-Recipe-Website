@@ -11,7 +11,7 @@ $drivers = $Driver->getDriverById($driver_id);
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="./images/<?php echo $driver['image_full_length'];?>">
+                <img class="driver_full_length_image" src="./images/<?php echo $driver['image_full_length'];?>">
             </div>
             <div class="col-md-6">
                 <div class="row">
