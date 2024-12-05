@@ -9999,6 +9999,31 @@ body#page-login #login-form .btn {
   background-color: #f0ffff;
   margin-top: 10px;
 }
+body#page-login .alert {
+  margin-top: 0;
+  color: inherit;
+}
+body#page-login .alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+body#page-login .alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+body#page-login .alert-dismissible {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+body#page-login .alert-close {
+  float: right;
+  position: relative;
+  text-align: center;
+  border: none;
+  background-color: inherit;
+}
 
 body#page-endurance .hypercar-image {
   border: solid 2px #f0ffff;

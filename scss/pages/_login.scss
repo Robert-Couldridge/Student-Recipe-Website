@@ -31,4 +31,30 @@ body#page-login{
         }
         margin: 20px;
     }
+    .alert {
+        margin-top:0;
+        color:inherit;
+    }
+    .alert-danger{
+        color:#a94442;
+        background-color:#f2dede;
+        border-color:#ebccd1;
+    }
+    .alert-success{
+        color:#3c763d;
+        background-color:#dff0d8;
+        border-color:#d6e9c6
+    }
+    .alert-dismissible{
+        padding-left:10px;
+        padding-right:10px;
+    }
+    .alert-close{
+        float: right;
+        position: relative;
+        text-align: center;
+        border: none;
+        background-color: inherit;
+    }
+
 }
