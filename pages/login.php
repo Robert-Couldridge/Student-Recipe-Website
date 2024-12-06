@@ -3,13 +3,15 @@
         <?php
             $User = new User($Conn);
             if($_POST){
-                if($_POST['reg']){
+                if(isset($_POST['reg'])){
                     // Registration form submitted
 
                     // Check for errors in the form
                     $error = "";
                     if(!$_POST['email']){
                         $error = "Email not set";
+                    } else if($User->checkDatabaseForEmailAddress($_POST['email'])){
+                        $error = "Email Address already has an account associated with it";
                     } else if(!$_POST['password']){
                         $error = "Password not set";
                     } else if(!$_POST['password_confirm']){
@@ -20,9 +22,7 @@
                         $error = "Password and Confirmation Password don't match";
                     } else if(strlen($_POST['password']) < 8){
                         $error = "Password must be at least 8 characters in length";
-                    } else if($User->checkDatabaseForEmailAddress($_POST['email'])){
-                        $error = "Email Address already has an account associated with it";
-                    }
+                    } 
                     if($error){
                         ?>
                             <div class="alert alert-danger alert-dismissible">
@@ -46,17 +46,57 @@
                         }else{
                             ?>
                                 <div class="alert alert-danger alert-dismissible">
-                                    An error occurred, please try again.
+                                    Registration failed, please try again.
                                     <button class="alert-close" data-dismiss="alert">X</button>
                                 </div>
                             <?php
                         }
                     }
                 }  
-                else if($_POST['login']){
-
+                else if(isset($_POST['login'])){
+                    
                     // Login form submitted
 
+                    // Check for errors in the form
+                    $error = "";
+                    if(!$_POST['email']){
+                        $error = "Email missing";
+                    } else if(!$User->checkDatabaseForEmailAddress($_POST['email'])){
+                        $error = "Email Address doesn't have an account associated with it";
+                    } else if(!$_POST['password']){
+                        $error = "Password missing";
+                    } else if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+                        $error = "Email address is not valid";
+                    } else if(strlen($_POST['password']) < 8){
+                        $error = "Password must be at least 8 characters in length";
+                    } 
+
+                    if($error){
+                        ?>
+                            <div class="alert alert-danger alert-dismissible">
+                                <?php echo $error; ?>
+                                <button class="alert-close" data-dismiss="alert">X</button>
+                            </div>
+                        <?php
+                    }
+                    else {
+                        if($User->loginUser($_POST)){
+                            // Credential correct
+                            ?>
+                                <div class="alert alert-success alert-dismissible">
+                                    User logged in!
+                                    <button class="alert-close" data-dismiss="alert">X</button>
+                                </div>
+                            <?php
+                        } else {
+                            ?>
+                            <div class="alert alert-danger alert-dismissible">
+                                Log in failed, please try again.
+                                <button class="alert-close" data-dismiss="alert">X</button>
+                            </div>
+                        <?php 
+                        }
+                    }
                 }  
             }
         ?>

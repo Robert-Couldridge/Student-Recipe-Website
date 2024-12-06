@@ -25,5 +25,18 @@
             }
             return true;
         }
+
+        public function loginUser($user_data){
+            if ($this->checkDatabaseForEmailAddress($user_data['email'])){
+                $query = "SELECT user_pass FROM users WHERE user_email = :user_email";
+                $stmt = $this->Conn->prepare($query);
+                $stmt->execute(["user_email" => $user_data['email']]);
+                $result = $stmt->fetch(PDO::FETCH_ASSOC);
+                if (password_verify($user_data['password'], $result['user_pass'])){
+                    return true;
+                }
+                return false;
+            }
+        }
         
     }
