@@ -47,7 +47,7 @@
                         </li>
                         <?php if(isset($_SESSION['is_loggedin'])){ ?>
                             <li class="nav-item">
-                                <a class="nav-item"><form method="post" action="src/php/logout.php"><button type="submit">Logout</button></form></a>
+                                <a class="nav-link" href="src/php/logout.php"><i class="fa-solid fa-fingerprint"></i>Logout</a>
                             </li>
                         <?php } else { ?>
                             <li class="nav-item">
