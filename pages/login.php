@@ -81,10 +81,13 @@
                     }
                     else {
                         if($User->loginUser($_POST)){
-                            // Credential correct
+                            // Credentials correct
+
+                            $_SESSION['is_loggedin'] = true;
+                            $_SESSION['user_data'] = $_POST;
                             ?>
                                 <div class="alert alert-success alert-dismissible">
-                                    User logged in!
+                                    User logged in, welcome back!
                                     <button class="alert-close" data-dismiss="alert">X</button>
                                 </div>
                             <?php

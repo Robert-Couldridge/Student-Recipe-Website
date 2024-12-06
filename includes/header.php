@@ -45,9 +45,15 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?p=endurance"><i class="fa-solid fa-gas-pump"></i>Endurance</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php?p=login"><i class="fa-solid fa-fingerprint"></i>Login/Register</a>
-                        </li>
+                        <?php if(isset($_SESSION['is_loggedin'])){ ?>
+                            <li class="nav-item">
+                                <a class="nav-item"><form method="post" action="src/php/logout.php"><button type="submit">Logout</button></form></a>
+                            </li>
+                        <?php } else { ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.php?p=login"><i class="fa-solid fa-fingerprint"></i>Login/Register</a>
+                            </li>
+                        <?php } ?>
                     </ul>
                     <form action="search.html" method="get" class="d-flex">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
