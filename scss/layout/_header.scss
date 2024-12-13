@@ -8,3 +8,11 @@ header {
     padding: 1px 0;
     text-align: center;
     }
+    .user-email{
+        padding-right: 100;
+        text-align: left;
+        color: $white;
+    }
+    .user-email:hover{
+        color: $primary-yellow;
+    }
