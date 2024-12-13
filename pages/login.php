@@ -2,6 +2,7 @@
     <div class="container">
         <?php
             $User = new User($Conn);
+            $MailHandler = new MailHandler();
             if($_POST){
                 if(isset($_POST['reg'])){
                     // Registration form submitted
@@ -33,6 +34,7 @@
                     } 
                     else{
 
+                        $MailHandler->sendEmailAddressConfirmation($_POST['email']);
                         // If theres no errors create a new user
                         $attempt = $User->createUser($_POST);
 
@@ -80,17 +82,13 @@
                         <?php
                     }
                     else {
+                        $MailHandler->sendEmailAddressConfirmation($_POST['email']);
                         if($User->loginUser($_POST)){
                             // Credentials correct
 
                             $_SESSION['is_loggedin'] = true;
                             $_SESSION['user_data'] = $_POST;
-                            ?>
-                                <div class="alert alert-success alert-dismissible">
-                                    User logged in, welcome back!
-                                    <button class="alert-close" data-dismiss="alert">X</button>
-                                </div>
-                            <?php
+                            header("Location: index.php");
                         } else {
                             ?>
                             <div class="alert alert-danger alert-dismissible">

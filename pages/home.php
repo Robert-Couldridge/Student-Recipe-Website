@@ -3,7 +3,7 @@
     <div class="container">
 
         <!-- Popular Recipes Section -->
-        <section id="recipes">
+        <section id="home">
                 <div class="bg-primary", aria-hidden="true", role="presentation", loading="lazy">
                     <img aria-hidden="true", role="presentation", loading="lazy", src="https://cdn.ferrari.com/cms/network/media/img/resize/66e3fbf870dcce0011d9c701-fia-wec-6-hours-fuji-2024-hypercar-free-practice-home-2?width=768&height=1024">
                 </div>
