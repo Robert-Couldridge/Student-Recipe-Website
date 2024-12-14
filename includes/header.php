@@ -56,13 +56,15 @@
                             </li>
                         <?php } ?>
                     </ul>
-                    <?php if(isset($_SESSION['is_loggedin'])){ ?>
-                        <a class="user-email"><i class="bi bi-person-fill"></i><?php echo $_SESSION['user_data']['email'];?></a>
-                    <?php } ?>
-                    <form action="search.html" method="get" class="d-flex">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success ms-2" type="submit">Search</button>
-                    </form>
+                    <div class="email-search">
+                        <?php if(isset($_SESSION['is_loggedin'])){ ?>
+                            <a class="user-email"><i class="bi bi-person-fill"></i><?php echo $_SESSION['user_data']['email'];?></a>
+                        <?php } ?>
+                        <form action="search.html" method="get" class="search-form">
+                            <input class="form-control search-form-box" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success ms-2" type="submit">Search</button>
+                        </form>
+                    </div>
                 </div>
             </div>
             

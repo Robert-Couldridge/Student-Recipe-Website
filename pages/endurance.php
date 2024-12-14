@@ -12,7 +12,7 @@ $drivers = $Driver->getDriversByDiscipline("Endurance");
         <div class="row">
             <?php foreach($drivers as $driver) { ?>
                 <div class="col-md-4">
-                    <div class="driver-card">
+                    <div class="driver-card driver-card-endurance">
                         <a href="index.php?p=driver&id=<?php echo $driver['driver_id']; ?>">
                             <img class="driver-card-image" src="./images/<?php echo $driver['image'];?>">
                         </a>

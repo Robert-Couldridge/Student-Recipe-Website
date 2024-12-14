@@ -9823,14 +9823,33 @@ header .page-header-top {
   padding: -200 -200 -200 0;
 }
 
+.email-search {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .user-email {
-  padding-right: 100;
-  text-align: left;
+  align-items: center;
   color: #fff;
+  order: 1;
 }
 
 .user-email:hover {
   color: #f8b645;
+}
+
+.search-form {
+  display: flex;
+  justify-content: flex-end;
+  width: 40%;
+  order: 2;
+  align-items: center;
+}
+
+.search-form-box {
+  width: 80% !important;
 }
 
 header nav {
@@ -9939,21 +9958,32 @@ footer p {
 
 .driver-card {
   margin: 0 0 30px 0;
-  background-color: #fff;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.15);
   padding: 12px;
   text-align: center;
-  border: solid 1px #f0ffff;
   border-radius: 3px;
 }
 .driver-card a {
-  color: #4d443d;
   text-decoration: none;
 }
 .driver-card a h3, .driver-card a .h3 {
-  font-size: 1.1rem;
-  padding-top: 10px;
+  font-size: 1.4rem;
+  padding-top: 20px;
   margin: 0;
+}
+
+.driver-card-f1 {
+  background-color: #fff;
+}
+.driver-card-f1 a {
+  color: #4d443d;
+}
+
+.driver-card-endurance {
+  background-color: #000;
+}
+.driver-card-endurance a {
+  color: #f0ffff;
 }
 
 .driver-card-image:hover {
@@ -9961,7 +9991,8 @@ footer p {
 }
 
 .driver-card-image {
-  height: 600px;
+  height: auto;
+  max-width: 100%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -10162,7 +10193,7 @@ body#page-endurance .hypercar-lightbox {
 
 body#driver .driver_full_length_image {
   height: 830px;
-  width: 600px;
+  width: 100%;
 }
 body#driver .driver-name {
   padding-bottom: 20px;
@@ -10237,7 +10268,7 @@ h2, .h2 {
   background-color: #fff;
   margin: 10px;
   padding: 20px;
-  width: 30%;
+  width: 30% !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 

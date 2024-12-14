@@ -9951,7 +9951,8 @@ footer p {
 }
 
 .driver-card-image {
-  height: 600px;
+  height: auto;
+  max-width: 100%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

@@ -1,26 +1,36 @@
 .driver-card {
 margin: 0 0 30px 0;
-background-color: $white;
 box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.15);
 padding: 12px;
 text-align: center;
-border: solid 1px $primary-azure;
 border-radius: 3px;
 a {
-    color: $primary-grey;
     text-decoration: none;
     h3 {
-    font-size: 1.1rem;
-    padding-top: 10px;
+    font-size: 1.4rem;
+    padding-top: 20px;
     margin: 0;
     }
 }
+}
+.driver-card-f1{
+    background-color: $white;
+    a {
+        color: $primary-grey;
+    }
+}
+.driver-card-endurance{
+    background-color: $black;
+    a {
+        color: $primary-azure;
+    }
 }
 .driver-card-image:hover{
     transform: scale(1.05);
 }
 .driver-card-image {
-height: 600px;
+height: auto;
+max-width: 100%;
 background-repeat: no-repeat;
 background-position: center center;
 background-size: cover;

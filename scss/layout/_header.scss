@@ -8,11 +8,28 @@ header {
     padding: 1px 0;
     text-align: center;
     }
+    .email-search{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
     .user-email{
-        padding-right: 100;
-        text-align: left;
+        align-items: center;
         color: $white;
+        order: 1;
     }
     .user-email:hover{
         color: $primary-yellow;
+    }
+    .search-form{
+        display: flex;
+        justify-content: flex-end;
+        width: 40%;
+        order: 2;
+        align-items: center;
+    }
+    .search-form-box{
+        width: 80% !important;
+        
     }
