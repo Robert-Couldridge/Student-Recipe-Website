@@ -34,25 +34,10 @@
                     } 
                     else{
 
-                        $MailHandler->sendEmailAddressConfirmation($_POST['email']);
-                        // If theres no errors create a new user
-                        $attempt = $User->createUser($_POST);
-
-                        if($attempt){
-                            ?>
-                                <div class="alert alert-success alert-dismissible">
-                                    User created - Please login!
-                                    <button class="alert-close" data-dismiss="alert">X</button>
-                                </div>
-                            <?php
-                        }else{
-                            ?>
-                                <div class="alert alert-danger alert-dismissible">
-                                    Registration failed, please try again.
-                                    <button class="alert-close" data-dismiss="alert">X</button>
-                                </div>
-                            <?php
-                        }
+                        $_SESSION['confirmation_code'] = $MailHandler->sendEmailAddressConfirmation($_POST['email']);
+                        $_SESSION['email_confirmation_check'] = true;
+                        $_SESSION['registration_post'] = $_POST;
+                        header("Location: index.php?p=email_confirm");
                     }
                 }  
                 else if(isset($_POST['login'])){
@@ -72,7 +57,6 @@
                     } else if(strlen($_POST['password']) < 8){
                         $error = "Password must be at least 8 characters in length";
                     } 
-
                     if($error){
                         ?>
                             <div class="alert alert-danger alert-dismissible">
@@ -82,25 +66,41 @@
                         <?php
                     }
                     else {
-                        $MailHandler->sendEmailAddressConfirmation($_POST['email']);
-                        if($User->loginUser($_POST)){
-                            // Credentials correct
-
-                            $_SESSION['is_loggedin'] = true;
-                            $_SESSION['user_data'] = $_POST;
-                            header("Location: index.php");
-                        } else {
-                            ?>
-                            <div class="alert alert-danger alert-dismissible">
-                                Log in failed, please try again.
-                                <button class="alert-close" data-dismiss="alert">X</button>
-                            </div>
-                        <?php 
-                        }
+                        $_SESSION['confirmation_code'] = $MailHandler->sendEmailAddressConfirmation($_POST['email']);
+                        $_SESSION['email_confirmation_check'] = true;
+                        $_SESSION['login_post'] = $_POST;
+                        header("Location: index.php?p=email_confirm");
                     }
-                }  
+                } 
             }
         ?>
+        <div class="container">
+            <h2>Modal Example</h2>
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog modal-lg">
+                
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                    <p>Some text in the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+            
+            </div>
         <div class="row">
             <div class="col-md-6">
                 <h2 id="login-h2">Login</h2>
@@ -134,6 +134,7 @@
                     <button type="submit" name="reg" value="1" class="btn btn-ferrari">Register</button>
                 </form>
             </div>
+        </div>
         </div>
     </div>
 </body>

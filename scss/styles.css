@@ -9979,60 +9979,169 @@ footer p {
   color: #4d443d;
 }
 
-body#page-login #login-h2, body#page-login #reg-h2 {
+body#page-login #login-h2, body#page-login #reg-h2, #page-email-confirm #login-h2, #page-email-confirm #reg-h2 {
   color: #f0ffff;
   margin-left: 20px;
   text-align: center;
 }
-body#page-login form label {
+body#page-login form label, #page-email-confirm form label {
   color: #f0ffff;
 }
-body#page-login #reg-form {
+body#page-login #reg-form, #page-email-confirm #reg-form {
   background-color: #f8b645;
   padding: 10px;
   border-radius: 1px;
   margin: 20px;
 }
-body#page-login #reg-form label {
+body#page-login #reg-form label, #page-email-confirm #reg-form label {
   color: #4d443d;
 }
-body#page-login #reg-form .btn {
+body#page-login #reg-form .btn, #page-email-confirm #reg-form .btn {
   background-color: #4d443d;
   color: #f8b645;
   border: 0;
   margin-top: 10px;
 }
-body#page-login #login-form {
+body#page-login #login-form, body#page-login #email-confirmation-form, #page-email-confirm #login-form, #page-email-confirm #email-confirmation-form {
   margin: 20px;
 }
-body#page-login #login-form .btn {
+body#page-login #login-form .btn, body#page-login #email-confirmation-form .btn, #page-email-confirm #login-form .btn, #page-email-confirm #email-confirmation-form .btn {
   background-color: #f0ffff;
   margin-top: 10px;
 }
-body#page-login .alert {
+body#page-login .alert, #page-email-confirm .alert {
   margin-top: 0;
   color: inherit;
 }
-body#page-login .alert-danger {
+body#page-login .alert-danger, #page-email-confirm .alert-danger {
   color: #a94442;
   background-color: #f2dede;
   border-color: #ebccd1;
 }
-body#page-login .alert-success {
+body#page-login .alert-success, #page-email-confirm .alert-success {
   color: #3c763d;
   background-color: #dff0d8;
   border-color: #d6e9c6;
 }
-body#page-login .alert-dismissible {
+body#page-login .alert-dismissible, #page-email-confirm .alert-dismissible {
   padding-left: 10px;
   padding-right: 10px;
 }
-body#page-login .alert-close {
+body#page-login .alert-close, #page-email-confirm .alert-close {
   float: right;
   position: relative;
   text-align: center;
   border: none;
   background-color: inherit;
+}
+body#page-login .modal, #page-email-confirm .modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+body#page-login .modal.fade .modal-dialog, #page-email-confirm .modal.fade .modal-dialog {
+  transform: translate(0, -25%);
+  transition: transform 0.3s ease-out;
+}
+body#page-login .modal.in .modal-dialog, #page-email-confirm .modal.in .modal-dialog {
+  transform: translate(0, 0);
+}
+body#page-login .modal-open, #page-email-confirm .modal-open {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body#page-login .modal-dialog, #page-email-confirm .modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+body#page-login .modal-content, #page-email-confirm .modal-content {
+  position: relative;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  outline: 0;
+}
+body#page-login .modal-backdrop, #page-email-confirm .modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+}
+body#page-login .modal-backdrop.fade, #page-email-confirm .modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+body#page-login .modal-backdrop.in, #page-email-confirm .modal-backdrop.in {
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+body#page-login .modal-header, #page-email-confirm .modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+body#page-login .modal-header .close, #page-email-confirm .modal-header .close {
+  margin-top: -2px;
+}
+body#page-login .modal-title, #page-email-confirm .modal-title {
+  margin: 0;
+  line-height: 1.42857143;
+}
+body#page-login .modal-body, #page-email-confirm .modal-body {
+  position: relative;
+  padding: 15px;
+}
+body#page-login .modal-footer, #page-email-confirm .modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+body#page-login .modal-footer .btn + .btn, #page-email-confirm .modal-footer .btn + .btn {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+body#page-login .modal-footer .btn-group .btn + .btn, #page-email-confirm .modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+body#page-login .modal-footer .btn-block + .btn-block, #page-email-confirm .modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+body#page-login .modal-scrollbar-measure, #page-email-confirm .modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+@media (min-width: 768px) {
+  body#page-login .modal-dialog, #page-email-confirm .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+  body#page-login .modal-content, #page-email-confirm .modal-content {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  body#page-login .modal-sm, #page-email-confirm .modal-sm {
+    width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  body#page-login .modal-lg, #page-email-confirm .modal-lg {
+    width: 900px;
+  }
 }
 
 body#page-endurance .hypercar-image {
@@ -10096,15 +10205,14 @@ header h1, header .h1, header p {
 }
 
 body {
-  background-color: #040c0f;
+  background-color: #040c0f !important;
 }
 
 h2, .h2 {
-  color: #f0ffff;
+  color: #f0ffff !important;
 }
 
 .hero {
-  background-image: url("hero-image.jpg"); /* Replace with a hero image */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -10113,11 +10221,6 @@ h2, .h2 {
   color: #f0ffff;
   text-align: center;
   font-family: "Pinyon Script", cursive;
-}
-
-.hero h1, .hero .h1 {
-  font-size: 2.5rem;
-  padding: 50px;
 }
 
 .container {
@@ -10148,29 +10251,4 @@ h2, .h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-/* these are there for activity 10 */
-.roboto-thin {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.roboto-light {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.roboto-regular {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.roboto-medium {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
 }/*# sourceMappingURL=styles.css.map */
