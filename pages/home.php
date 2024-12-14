@@ -4,18 +4,12 @@
 
         <!-- Popular Recipes Section -->
         <section id="home">
-                <div class="bg-primary", aria-hidden="true", role="presentation", loading="lazy">
-                    <img aria-hidden="true", role="presentation", loading="lazy", src="https://cdn.ferrari.com/cms/network/media/img/resize/66e3fbf870dcce0011d9c701-fia-wec-6-hours-fuji-2024-hypercar-free-practice-home-2?width=768&height=1024">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img class="home-image" src="images/factory1.webp" alt="">
+                    </div>
                 </div>
-            </div>
         </section>
-
-        <section id="next-race">
-            <h2>Formula 1 Race Calendar</h2>
-            <div class="next-race"></div>
-            <script src="src/js/next_race.js"></script>
-        </section>
-
         <!-- Newsletter Signup Section -->
         <section id="newsletter">
             <h2>Join Our Newsletter</h2>

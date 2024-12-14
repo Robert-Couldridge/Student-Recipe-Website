@@ -7,7 +7,7 @@ text-align: center;
 border: solid 1px $primary-azure;
 border-radius: 3px;
 a {
-    color: $primary-grey;
+    color: $primary-dark-grey;
     text-decoration: none;
     h3 {
     font-size: 1.1rem;
@@ -35,5 +35,5 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: $primary-grey;
+    color: $primary-dark-grey;
 }

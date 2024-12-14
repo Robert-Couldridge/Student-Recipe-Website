@@ -9906,7 +9906,7 @@ header nav ul li a i {
 }
 
 footer {
-  background-color: #a7001a;
+  background-color: #181818;
   color: #f0ffff;
   padding: 20px 0;
 }
@@ -9924,7 +9924,7 @@ footer p {
   border-radius: 3px;
 }
 .part-card a {
-  color: #4d443d;
+  color: #181818;
   text-decoration: none;
 }
 .part-card a h3, .part-card a .h3 {
@@ -9953,7 +9953,7 @@ footer p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #4d443d;
+  color: #181818;
 }
 
 .driver-card {
@@ -9976,7 +9976,7 @@ footer p {
   background-color: #fff;
 }
 .driver-card-f1 a {
-  color: #4d443d;
+  color: #181818;
 }
 
 .driver-card-endurance {
@@ -10007,7 +10007,7 @@ footer p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #4d443d;
+  color: #181818;
 }
 
 body#page-login #login-h2, body#page-login #reg-h2, #page-email-confirm #login-h2, #page-email-confirm #reg-h2 {
@@ -10025,10 +10025,10 @@ body#page-login #reg-form, #page-email-confirm #reg-form {
   margin: 20px;
 }
 body#page-login #reg-form label, #page-email-confirm #reg-form label {
-  color: #4d443d;
+  color: #181818;
 }
 body#page-login #reg-form .btn, #page-email-confirm #reg-form .btn {
-  background-color: #4d443d;
+  background-color: #303030;
   color: #f8b645;
   border: 0;
   margin-top: 10px;
@@ -10208,7 +10208,7 @@ body#driver .driver-stats-list li {
 body#driver .driver-stats-table {
   color: #fff;
   font-size: 1.1rem;
-  background-color: #4d443d;
+  background-color: #181818;
   width: 80%;
   text-align: center;
 }
@@ -10219,6 +10219,11 @@ body#driver .driver-stats-table th {
 body#driver .driver-stats-table td {
   height: 80px;
   font-size: 2.2rem;
+}
+
+body#page-home .home-image {
+  width: 100%;
+  height: auto;
 }
 
 * {
@@ -10236,7 +10241,7 @@ header h1, header .h1, header p {
 }
 
 body {
-  background-color: #040c0f !important;
+  background-color: #303030 !important;
 }
 
 h2, .h2 {

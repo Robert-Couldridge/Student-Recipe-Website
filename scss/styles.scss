@@ -21,6 +21,7 @@
 @import "pages/login";
 @import "pages/endurance";
 @import "pages/driver";
+@import "pages/home";
 
 // Themes
 @import "themes/theme";
@@ -41,7 +42,7 @@ header{
 }
 
 body {
-    background-color: $primary-black !important;
+    background-color: $primary-light-grey !important;
 } 
 h2{
     color: $primary-azure !important;
