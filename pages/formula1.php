@@ -30,7 +30,9 @@ $drivers = $Driver->getDriversByDiscipline("Formula 1");
             <?php foreach($parts as $part) { ?>
                 <div class="col-md-3">
                     <div class="part-card">
+                        <a href="index.php?p=part&id=<?php echo $part['part_id']; ?>">
                         <img class="part-card-image" src="./images/<?php echo $part['part_image'];?>">
+                        </a>
                         <a href="index.php?p=part&id=<?php echo $part['part_id']; ?>"><h3><?php echo $part['part_name'];?></h3></a>
                     </div>
                 </div>

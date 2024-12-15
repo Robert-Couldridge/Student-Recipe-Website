@@ -10226,6 +10226,39 @@ body#page-home .home-image {
   height: auto;
 }
 
+body#part .part-image {
+  width: 400px;
+  height: 400px;
+}
+body#part .part-name {
+  padding-bottom: 20px;
+}
+body#part .parts-information-table {
+  color: #fff;
+  font-size: 1.1rem;
+  background-color: #181818;
+  width: 80%;
+  text-align: center;
+}
+body#part .parts-information-table th {
+  height: 20px;
+  border-bottom: 1px solid #fff;
+}
+body#part .parts-information-table td {
+  height: 80px;
+  font-size: 2.2rem;
+}
+body#part h3, body#part .h3, body#part p {
+  color: #f0ffff;
+}
+body#part .race-selection {
+  background-color: #181818;
+  color: #181818;
+}
+body#part .race-selection label {
+  color: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
