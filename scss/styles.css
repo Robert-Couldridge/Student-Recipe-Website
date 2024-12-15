@@ -10251,11 +10251,12 @@ body#part .parts-information-table td {
 body#part h3, body#part .h3, body#part p {
   color: #f0ffff;
 }
-body#part .race-selection {
+body#part .part-order-form {
   background-color: #181818;
   color: #181818;
+  width: 80%;
 }
-body#part .race-selection label {
+body#part .part-order-form label {
   color: #fff;
 }
 

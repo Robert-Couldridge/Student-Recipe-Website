@@ -24,9 +24,10 @@ body#part{
     h3, p {
         color: $primary-azure;
     }
-    .race-selection{
+    .part-order-form{
         background-color: $primary-dark-grey;
         color: $primary-dark-grey;
+        width: 80%;
         label {
             color: $white;
         }
