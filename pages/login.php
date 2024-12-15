@@ -27,17 +27,16 @@
                     if($error){
                         ?>
                             <div class="alert alert-danger alert-dismissible">
-                                <?php echo $error; ?>
+                                <?php echo $error;?>
                                 <button class="alert-close" data-dismiss="alert">X</button>
                             </div>
                         <?php
                     } 
                     else{
-
                         $_SESSION['confirmation_code'] = $MailHandler->sendEmailAddressConfirmation($_POST['email']);
                         $_SESSION['email_confirmation_check'] = true;
                         $_SESSION['registration_post'] = $_POST;
-                        header("Location: index.php?p=email_confirm");
+                        echo '<meta http-equiv="refresh" content="0;url=index.php?p=email_confirm">';
                     }
                 }  
                 else if(isset($_POST['login'])){
@@ -60,7 +59,7 @@
                     if($error){
                         ?>
                             <div class="alert alert-danger alert-dismissible">
-                                <?php echo $error; ?>
+                                <?php echo $error;?>
                                 <button class="alert-close" data-dismiss="alert">X</button>
                             </div>
                         <?php
@@ -69,7 +68,8 @@
                         $_SESSION['confirmation_code'] = $MailHandler->sendEmailAddressConfirmation($_POST['email']);
                         $_SESSION['email_confirmation_check'] = true;
                         $_SESSION['login_post'] = $_POST;
-                        header("Location: index.php?p=email_confirm");
+                        echo '<meta http-equiv="refresh" content="0;url=index.php?p=email_confirm">';
+                        // header("Location: index.php?p=email_confirm");
                     }
                 } 
             }

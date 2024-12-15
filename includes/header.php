@@ -46,20 +46,27 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?p=endurance"><i class="fa-solid fa-gas-pump"></i>Endurance</a>
                         </li>
-                        <?php if(isset($_SESSION['is_loggedin'])){ ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?p=order"><i class="fa-solid fa-gas-pump"></i>Order</a>
+                        </li>
+                        <?php
+                        if(isset($_SESSION['is_loggedin'])){ ?>
                             <li class="nav-item">
                                 <a class="nav-link" href="src/php/logout.php"><i class="fa-solid fa-fingerprint"></i>Logout</a>
                             </li>
-                        <?php } else { ?>
+                        <?php } else {?>
                             <li class="nav-item">
                                 <a class="nav-link" href="index.php?p=login"><i class="fa-solid fa-fingerprint"></i>Login/Register</a>
                             </li>
-                        <?php } ?>
+                        <?php } 
+                        ?>
                     </ul>
                     <div class="email-search">
-                        <?php if(isset($_SESSION['is_loggedin'])){ ?>
+                        <?php
+                        if(isset($_SESSION['is_loggedin'])){ ?>
                             <a class="user-email"><i class="bi bi-person-fill"></i><?php echo $_SESSION['user_data']['email'];?></a>
-                        <?php } ?>
+                        <?php }
+                        ?>
                         <form action="search.html" method="get" class="search-form">
                             <input class="form-control search-form-box" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-success ms-2" type="submit">Search</button>

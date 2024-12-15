@@ -10260,6 +10260,11 @@ body#part .part-order-form label {
   color: #fff;
 }
 
+body#page-order .order-list {
+  color: #fff;
+  background-color: #181818;
+}
+
 * {
   margin: 0;
   padding: 0;

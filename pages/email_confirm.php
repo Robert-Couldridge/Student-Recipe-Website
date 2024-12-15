@@ -33,7 +33,7 @@
                         $_SESSION['is_loggedin'] = true;
                         $_SESSION['user_data'] = $_SESSION['login_post'];
                         unset($_SESSION['login_post']);
-                        header("Location: index.php");
+                        echo '<meta http-equiv="refresh" content="0;url=index.php">';
                     } else {
                         ?>
                         <div class="alert alert-danger alert-dismissible">

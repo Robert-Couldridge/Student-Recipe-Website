@@ -13,22 +13,26 @@
                 $destination = $_POST["races"];
                 $quantity = $_POST["quantity"];
 
-                if (!isset($_SESSION['cart'])) {
-                    $_SESSION['cart'] = [];
+                if (!isset($_SESSION['order'])) {
+                    $_SESSION['order'] = [];
                 }
-                // add to cart and check for errors
+                // add to order and check for errors
                 $error = "";
-                if (isset($_SESSION['cart'][$part_id])) {
-                    if( $_SESSION['cart'][$part_id] + $quantity > $part['quantity_in_stores']){
+                if (isset($_SESSION['order'][$part['part_name']])) {
+                    $quantity_in_order = 0;
+                    foreach($_SESSION['order'][$part['part_name']] as $destination => $destination_quantity){
+                        $quantity_in_order += $destination_quantity;
+                    }
+                    if( $quantity_in_order + $quantity > $part['quantity_in_stores']){
                         $error = "Not enough {$part['part_name']}s in stores";
                     } else {
-                    $_SESSION['cart'][$part_id] += $quantity;
+                    $_SESSION['order'][$part['part_name']][$destination] += $quantity;
                     }
                 } else {
                     if($quantity > $part['quantity_in_stores']){
                         $error = "Not enough {$part['part_name']}s in stores";
                     } else {
-                    $_SESSION['cart'][$part_id] = $quantity;
+                    $_SESSION['order'][$part['part_name']][$destination] = $quantity;
                     }
                 }
                 if($error){
