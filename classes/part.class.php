@@ -21,4 +21,13 @@
                 ]);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
+
+        public function orderParts($part_name, $quantity){
+            $query = "UPDATE parts SET quantity_in_stores = quantity_in_stores - :quantity WHERE part_name = :part_name";
+            $stmt = $this->Conn->prepare($query);
+            return $stmt->execute([
+                "part_name" => $part_name,
+                "quantity" => $quantity,
+            ]);
+        }
     }

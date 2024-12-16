@@ -9,9 +9,9 @@
 <?php foreach($parts as $part) {?>
     <div class="container">
         <?php
-            if($_POST['add-to-order']){
-                $destination = $_POST["races"];
-                $quantity = $_POST["quantity"];
+            if(isset($_POST['add-to-order'])){
+                $post_destination = $_POST["races"];
+                $post_quantity = $_POST["quantity"];
 
                 if (!isset($_SESSION['order'])) {
                     $_SESSION['order'] = [];
@@ -23,16 +23,20 @@
                     foreach($_SESSION['order'][$part['part_name']] as $destination => $destination_quantity){
                         $quantity_in_order += $destination_quantity;
                     }
-                    if( $quantity_in_order + $quantity > $part['quantity_in_stores']){
+                    if( $quantity_in_order + $post_quantity > $part['quantity_in_stores']){
                         $error = "Not enough {$part['part_name']}s in stores";
                     } else {
-                    $_SESSION['order'][$part['part_name']][$destination] += $quantity;
+                        if (isset($_SESSION['order'][$part['part_name']][$post_destination])){
+                            $_SESSION['order'][$part['part_name']][$post_destination] += $post_quantity;
+                        } else {
+                            $_SESSION['order'][$part['part_name']][$post_destination] = $post_quantity;
+                        }
                     }
                 } else {
-                    if($quantity > $part['quantity_in_stores']){
+                    if($post_quantity > $part['quantity_in_stores']){
                         $error = "Not enough {$part['part_name']}s in stores";
                     } else {
-                    $_SESSION['order'][$part['part_name']][$destination] = $quantity;
+                    $_SESSION['order'][$part['part_name']][$post_destination] = $post_quantity;
                     }
                 }
                 if($error){
@@ -77,7 +81,7 @@
                     <label for="races">Destination:</label>
                     <select name="races" id="races">
                         <?php foreach($races as $race) {?>
-                        <option value=<?php echo $race['circuit_name'];?>><?php echo $race['circuit_name'];?></option>
+                        <option value="<?php echo $race['circuit_name'];?>"><?php echo $race['circuit_name'];?></option>
                         <?php } ?>
                     </select>
                     <br><br>

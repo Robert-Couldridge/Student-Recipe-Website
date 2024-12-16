@@ -2,18 +2,59 @@
     $Part = new Part($Conn);
 ?>
 <body id="page-order">
+    <?php
+        if(isset($_POST['submit-order'])){
+            $order_failed = false;
+            foreach($_SESSION['order'] as $part_name => $part_entry){
+                $attempt = $Part->orderParts($part_name, $part_entry['total_part_quantity']);
+                if($attempt){
+                    unset($_SESSION['order'][$part_name]); 
+                    ?>
+                        <div class="alert alert-success alert-dismissible">
+                            <?php echo $part_name?> order placed!
+                            <button class="alert-close" data-dismiss="alert">X</button>
+                        </div>
+                    <?php
+                }else{
+                    $order_failed = true;
+                    ?>
+                        <div class="alert alert-danger alert-dismissible">
+                            <?php echo $part_name?> order failed, please try again.
+                            <button class="alert-close" data-dismiss="alert">X</button>
+                        </div>
+                    <?php
+                }
+            }
+            if (!$order_failed){
+                unset($_SESSION['order']);
+            }
+        }
+    ?>
     <div class="container">
         <div class="row">
+        <?php if(isset($_SESSION['order'])){ ?>
             <div class="order-list">
-                <h1>Current Order</h1>
-                <?php foreach($_SESSION['order'] as $part_id => $part_entry) {?>
-                    <h2>Part Name: <?php echo $part_id;?></h2>
-                    <?php foreach($part_entry as $destination => $quantity){?>
-                        <h3>Destination: <?php echo $destination;?></h3>
-                        <h3>Quantity: <?php echo $quantity;?></h3>
-                    <?php } ?>
-                <?php } ?>
+                <h2>Current Order</h2>
+                <?php foreach($_SESSION['order'] as $part_name => $part_entry) {
+                    $total_part_quantity = 0;?>
+                    <h3>Part Name: <?php echo $part_name;?></h3>
+                    <?php foreach($part_entry as $destination => $quantity){
+                        if ($destination != 'total_part_quantity'){
+                        $total_part_quantity += $quantity;?>
+                        <p>Destination: <?php echo $destination;?></p>
+                        <p>Quantity: <?php echo $quantity;?></p>
+                    <?php }} ?>
+                    <h4>Total: <?php echo $total_part_quantity;?></h4>
+                    <?php
+                    $_SESSION['order'][$part_name]['total_part_quantity'] = $total_part_quantity;
+                    }?>
             </div>
+            <form class="order-submit-form" id="order-submit-form" method="post" action="">
+            <button type="submit" name="submit-order" value="1">Submit Order</button>
+            </form>
+        <?php } else {?>
+        <h3 class="order-list">No items in order</h3>
+        <?php }?>
         </div>
     </div>
 </body>

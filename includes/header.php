@@ -47,7 +47,7 @@
                             <a class="nav-link" href="index.php?p=endurance"><i class="fa-solid fa-gas-pump"></i>Endurance</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php?p=order"><i class="fa-solid fa-gas-pump"></i>Order</a>
+                            <a class="nav-link" href="index.php?p=order"><i class="fa-solid fa-cart-shopping"></i></i>Order</a>
                         </li>
                         <?php
                         if(isset($_SESSION['is_loggedin'])){ ?>
