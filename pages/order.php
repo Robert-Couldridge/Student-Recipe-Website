@@ -57,9 +57,12 @@
             <form class="order-submit-form" id="order-submit-form" method="post" action="">
             <button type="submit" name="submit-order" value="1">Submit Order</button>
             </form>
-        <?php } else {?>
-        <h3 class="order-list">No items in order</h3>
-        <?php }?>
+        <?php } else {
+            if(isset($_SESSION['is_loggedin'])){
+            ?><h3 class="order-list">No items in order</h3><?php 
+            } else {
+                ?><h3 class="order-list">Log in to create an order</h3><?php
+            }}?>
         </div>
     </div>
 </body>

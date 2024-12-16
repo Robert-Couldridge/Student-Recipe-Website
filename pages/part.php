@@ -77,6 +77,7 @@
                     </table>
                 </div>
                 <br><br>
+                <?php if(isset($_SESSION['is_loggedin'])){?>
                 <form class="part-order-form" id="part-order-form" method="post" action="">
                     <label for="races">Destination:</label>
                     <select name="races" id="races">
@@ -90,6 +91,9 @@
                     <br><br>
                     <button type="submit" name="add-to-order" value="1">Add to Order</button>
                 </form>
+                <?php } else {?>
+                    <h3>log in to order parts</h3>
+                <?php } ?>
             </div>
         </div>
     </div>
