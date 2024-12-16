@@ -1,36 +1,41 @@
 <?php
     $Part = new Part($Conn);
-?>
+    $MailHandler = new MailHandler();
+?>  
 <body id="page-order">
-    <?php
-        if(isset($_POST['submit-order'])){
-            $order_failed = false;
-            foreach($_SESSION['order'] as $part_name => $part_entry){
-                $attempt = $Part->orderParts($part_name, $part_entry['total_part_quantity']);
-                if($attempt){
-                    unset($_SESSION['order'][$part_name]); 
-                    ?>
-                        <div class="alert alert-success alert-dismissible">
-                            <?php echo $part_name?> order placed!
-                            <button class="alert-close" data-dismiss="alert">X</button>
-                        </div>
-                    <?php
-                }else{
-                    $order_failed = true;
-                    ?>
-                        <div class="alert alert-danger alert-dismissible">
-                            <?php echo $part_name?> order failed, please try again.
-                            <button class="alert-close" data-dismiss="alert">X</button>
-                        </div>
-                    <?php
+    <div class="container">
+        <?php
+            if(isset($_POST['submit-order'])){
+                $order_failed = false;
+                $_SESSION['order-email'] = $_SESSION['order'];
+                foreach($_SESSION['order'] as $part_name => $part_entry){
+                    $attempt = $Part->orderParts($part_name, $part_entry['total_part_quantity']);
+
+                    if($attempt){
+                        unset($_SESSION['order'][$part_name]); 
+                        ?>
+                            <div class="alert alert-success alert-dismissible">
+                                <?php echo $part_name?> order placed!
+                                <button class="alert-close" data-dismiss="alert">X</button>
+                            </div>
+                        <?php
+                    }else{
+                        $order_failed = true;
+                        unset($_SESSION['order-email'][$part_name]);
+                        ?>
+                            <div class="alert alert-danger alert-dismissible">
+                                <?php echo $part_name?> order failed, please try again.
+                                <button class="alert-close" data-dismiss="alert">X</button>
+                            </div>
+                        <?php
+                    }
+                }
+                if (!$order_failed){
+                    $MailHandler->sendOrderConfirmationEmail($_SESSION['user_data']['email'], $_SESSION['order-email']);
+                    unset($_SESSION['order']);
                 }
             }
-            if (!$order_failed){
-                unset($_SESSION['order']);
-            }
-        }
-    ?>
-    <div class="container">
+        ?>
         <div class="row">
         <?php if(isset($_SESSION['order'])){ ?>
             <div class="order-list">

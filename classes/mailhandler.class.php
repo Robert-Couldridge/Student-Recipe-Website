@@ -5,30 +5,67 @@ use PHPMailer\PHPMailer\Exception;
 
 class MailHandler {
     
-    public function sendEmailAddressConfirmation($user_email){
-        $mail = new PHPMailer(true);
+    protected $mail;
 
+    public function __construct()
+    {
+        $this->mail = new PHPMailer(true);
+    }
+
+    public function sendEmailAddressConfirmation($user_email){
         $confirm_code = rand(100000, 999999);
 
         try {
-            $mail->SMTPDebug = 0;
-            $mail->isSMTP();
-            $mail->Host = 'smtp.34sp.com';
-            $mail->SMTPAuth = true;
-            $mail->Username = 'scuderiaferrari@f499p.uosweb.co.uk';
-            $mail->Password = '571D2B4B50EC7F9119878b3CD83D6760';
-            $mail->SMTPSecure = 'tls';
-            $mail->Port = 587;
+            $this->mail->SMTPDebug = 0;
+            $this->mail->isSMTP();
+            $this->mail->Host = 'smtp.34sp.com';
+            $this->mail->SMTPAuth = true;
+            $this->mail->Username = 'scuderiaferrari@f499p.uosweb.co.uk';
+            $this->mail->Password = '571D2B4B50EC7F9119878b3CD83D6760';
+            $this->mail->SMTPSecure = 'tls';
+            $this->mail->Port = 587;
 
-            $mail->setFrom('scuderiaferrari@f499p.uosweb.co.uk');
-            $mail->addAddress($user_email);
+            $this->mail->setFrom('scuderiaferrari@f499p.uosweb.co.uk');
+            $this->mail->addAddress($user_email);
 
-            $mail->Subject = 'Email Confirmation Code';
-            $mail->Body = $confirm_code;
-            $mail->send();
+            $this->mail->Subject = 'Email Confirmation Code';
+            $this->mail->Body = $confirm_code;
+            $this->mail->send();
         } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            echo "Message could not be sent. Mailer Error: {$this->mail->ErrorInfo}";
         }
         return $confirm_code;
+    }
+
+    public function sendOrderConfirmationEmail($user_email, $order){
+        try {
+            $this->mail->SMTPDebug = 0;
+            $this->mail->isSMTP();
+            $this->mail->Host = 'smtp.34sp.com';
+            $this->mail->SMTPAuth = true;
+            $this->mail->Username = 'scuderiaferrari@f499p.uosweb.co.uk';
+            $this->mail->Password = '571D2B4B50EC7F9119878b3CD83D6760';
+            $this->mail->SMTPSecure = 'tls';
+            $this->mail->Port = 587;
+
+            $this->mail->setFrom('scuderiaferrari@f499p.uosweb.co.uk');
+            $this->mail->addAddress($user_email);
+
+            $this->mail->Subject = 'Order Confirmation Email';
+            $this->mail->Body = "Order Complete\n_________________\n";
+            foreach($order as $part_name => $part_entry){
+                foreach($part_entry as $destination => $quantity){
+                    if ($destination != 'total_part_quantity'){
+                        $this->mail->Body .= "$quantity $part_name's ordered to $destination\n";
+                    }
+                    else{
+                        $this->mail->Body .= "Total $quantity\n------------\n";
+                    }
+                }
+            }
+            $this->mail->send();
+        } catch (Exception $e) {
+            echo "Message could not be sent. Mailer Error: {$this->mail->ErrorInfo}";
+        }
     }
 }
