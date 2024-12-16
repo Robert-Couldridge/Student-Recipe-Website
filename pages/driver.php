@@ -2,6 +2,16 @@
 $driver_id = $_GET['id'];
 $Driver = new Driver($Conn);
 $drivers = $Driver->getDriverById($driver_id);
+$DriverSpec = new DriverSpec($Conn);
+$suspension_stiffness = $DriverSpec->calculateSpecAverage($driver_id, "suspension_stiffness");
+$brake_bias = $DriverSpec->calculateSpecAverage($driver_id, "brake_bias");
+$differential_setting = $DriverSpec->calculateSpecAverage($driver_id, "differential_setting");
+$suspension_stiffness = round($suspension_stiffness['avg'], 1);
+$brake_bias = round($brake_bias['avg'], 1);
+$differential_setting = round($differential_setting['avg'], 1);
+if(isset($_POST['submit-specification'])){
+    $DriverSpec->createSpec($driver_id, $_POST);
+}
 ?>
 
 <body id="driver">
@@ -23,19 +33,75 @@ $drivers = $Driver->getDriverById($driver_id);
                         <li><i class="bi bi-flag-fill"></i> Country: <?php echo $driver['country'];?></li>
                     </ul>
                 </div>
-                <div>
-                    <table class="driver-stats-table">
-                        <tr>
-                            <th>Race Wins</th>
-                            <th>Pole Postitions</th>
-                            <th>Grand Prix</th>
-                        </tr>
-                        <tr>
-                            <td><?php echo $driver['race_wins'];?></td>
-                            <td><?php echo $driver['pole_positions'];?></td>
-                            <td><?php echo $driver['grand_prix'];?></td>
-                        </tr>
-                    </table>
+                    <div>
+                        <table class="driver-stats-table">
+                            <tr>
+                                <th>Race Wins</th>
+                                <th>Pole Postitions</th>
+                                <th>Grand Prix</th>
+                            </tr>
+                            <tr>
+                                <td><?php echo $driver['race_wins'];?></td>
+                                <td><?php echo $driver['pole_positions'];?></td>
+                                <td><?php echo $driver['grand_prix'];?></td>
+                            </tr>
+                        </table>
+                    </div>
+                <br><br>
+                    <h3>Driver Specifications</h3>
+                    <ul class="specifications-list">
+                        <li>Suspension Stiffness <?php echo $suspension_stiffness; ?></li>
+                        <li>Brake Bias <?php echo $brake_bias; ?></li>
+                        <li>Differential Setting <?php echo $differential_setting; ?></li>
+                    </ul>
+                    <div class="specification-form">
+                        <?php if(isset($_SESSION['is_loggedin'])){?>
+                            <form method="post" action="">
+                                <label for="suspension_stiffness">Suspension Stiffness</label>
+                                <select id="suspension_stiffness" name="suspension_stiffness">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                                <label for="brake_bias">Brake Bias</label>
+                                <select id="brake_bias" name="brake_bias">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                                <label for="differential_setting">Differential Setting</label>
+                                <select id="differential_setting" name="differential_setting">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                                <button type="submit" name="submit-specification">Submit Specification</button>
+                            </form>
+                        <?php } else {
+                            ?><p>only logged in mechanics can update driver specifications</p><?php
+                        } ?>
+                    </div>
                 </div>
             </div>
         </div>

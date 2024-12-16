@@ -10220,6 +10220,20 @@ body#driver .driver-stats-table td {
   height: 80px;
   font-size: 2.2rem;
 }
+body#driver h3, body#driver .h3 {
+  color: #fff;
+}
+body#driver .specifications-list {
+  color: #fff;
+  background-color: #181818;
+  width: 50%;
+}
+body#driver .specification-form {
+  background-color: #181818;
+}
+body#driver .specification-form label, body#driver .specification-form p {
+  color: #fff;
+}
 
 body#page-home .home-image {
   width: 100%;

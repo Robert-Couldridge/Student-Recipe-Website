@@ -28,4 +28,18 @@ body#driver{
         height: 80px;
         font-size: 2.2rem;
     }
+    h3 {
+        color: $white;
+    }
+    .specifications-list{
+        color: $white;
+        background-color: $primary-dark-grey;
+        width: 50%;
+    }
+    .specification-form{
+        background-color: $primary-dark-grey;
+        label, p {
+            color:$white;
+        }
+    }
 }
