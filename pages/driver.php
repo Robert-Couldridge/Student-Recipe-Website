@@ -9,6 +9,9 @@ $differential_setting = $DriverSpec->calculateSpecAverage($driver_id, "different
 $suspension_stiffness = round($suspension_stiffness['avg'], 1);
 $brake_bias = round($brake_bias['avg'], 1);
 $differential_setting = round($differential_setting['avg'], 1);
+$most_recent_comment_data = $DriverSpec->getMostRecentComment($driver_id);
+$most_recent_comment = $most_recent_comment_data['comments'];
+$most_recent_comment_email = $most_recent_comment_data['user_email'];
 if(isset($_POST['submit-specification'])){
     $DriverSpec->createSpec($driver_id, $_POST);
 }
@@ -96,11 +99,19 @@ if(isset($_POST['submit-specification'])){
                                     <option value="9">9</option>
                                     <option value="10">10</option>
                                 </select>
+                                <input type="text" id="comments" name="comments" placeholder="mechanic comments">
                                 <button type="submit" name="submit-specification">Submit Specification</button>
                             </form>
                         <?php } else {
                             ?><p>only logged in mechanics can update driver specifications</p><?php
                         } ?>
+                    </div>
+                    <br></br>
+                    <div class="mechanic-comments">
+                        <?php if($most_recent_comment_data){?>
+                            <h3>Mechanics' Notes</h3>
+                            <p><?php echo "$most_recent_comment_email : $most_recent_comment"?></p>
+                        <?php } ?>
                     </div>
                 </div>
             </div>

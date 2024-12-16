@@ -30,5 +30,14 @@
         ));
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+    public function getMostRecentComment($driver_id){
+        $query = "SELECT * FROM driver_specifications WHERE driver_id = :driver_id ORDER BY specification_id DESC LIMIT 1";
+        $stmt = $this->Conn->prepare($query);
+        $stmt->execute(array(
+            'driver_id' => $driver_id,
+        ));
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
 }
 

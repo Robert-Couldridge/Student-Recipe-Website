@@ -10234,6 +10234,10 @@ body#driver .specification-form {
 body#driver .specification-form label, body#driver .specification-form p {
   color: #fff;
 }
+body#driver .mechanic-comments {
+  background-color: #181818;
+  color: #fff;
+}
 
 body#page-home .home-image {
   width: 100%;
