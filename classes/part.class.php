@@ -31,11 +31,11 @@
             ]);
         }
 
-        public function getPartsByCategory($category){
-            $query = "SELECT * FROM parts WHERE category = :category";
+        public function getPartsByCategoryId($category_id){
+            $query = "SELECT * FROM parts WHERE category_id = :category_id";
             $stmt = $this->Conn->prepare($query);
             $stmt->execute([
-                "category" => $category
+                "category_id" => $category_id
             ]);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }

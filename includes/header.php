@@ -46,12 +46,12 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-gas-pump"></i>Parts Categories</a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="index.php?p=category&category=engine">Engine</a>
-                                <a class="dropdown-item" href="index.php?p=category&category=brakes">Brakes</a>
-                                <a class="dropdown-item" href="index.php?p=category&category=transmission">Transmission</a>
-                                <a class="dropdown-item" href="index.php?p=category&category=suspension & chassis">Suspension & Chassis</a>
-                                <a class="dropdown-item" href="index.php?p=category&category=wheels & tyres">Wheels & Tyres</a>
-                                <a class="dropdown-item" href="index.php?p=category&category=misc">Misc</a>
+                                <?php
+                                $Category = new Category($Conn);
+                                $categories = $Category->getAllCategories();
+                                foreach($categories as $category) { ?>
+                                    <a class="dropdown-item" href="index.php?p=category&id=<?php echo $category['category_id']?>"><?php echo $category['category_name']?></a>
+                                <?php } ?>
                             </div>
                         </li>
                         <li class="nav-item">

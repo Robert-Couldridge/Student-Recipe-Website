@@ -1,12 +1,14 @@
 <?php
-    $category = $_GET['category'];
+    $category_id = $_GET['id'];
     $Part = new Part($Conn);
-    $parts = $Part->getPartsByCategory($category);
+    $parts = $Part->getPartsByCategoryId($category_id);
+    $Category = new Category($Conn);
+    $category_name = $Category->getCategoryNameFromId($category_id)
 ?>
 <body id="page-category">
     <div class="container">
         <div class="parts-container">
-            <h2><?php echo $category ?></h2>
+            <h2><?php echo $category_name['category_name'] ?></h2>
 
             <div class="row part-row">
                 <?php foreach($parts as $part) { ?>
