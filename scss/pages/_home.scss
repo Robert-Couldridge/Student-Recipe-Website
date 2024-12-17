@@ -3,4 +3,9 @@ body#page-home{
         width: 100%;
         height: auto;
     }
+    .home-text{
+        color: $primary-dark-grey;
+        background-color: $primary-azure;
+        text-align: center;
+    }
 }

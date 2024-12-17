@@ -9852,6 +9852,10 @@ header .page-header-top {
   width: 80% !important;
 }
 
+.modal-content {
+  color: #181818;
+}
+
 header nav {
   background-color: #040c0f;
   display: flex;
@@ -10242,6 +10246,11 @@ body#driver .mechanic-comments {
 body#page-home .home-image {
   width: 100%;
   height: auto;
+}
+body#page-home .home-text {
+  color: #181818;
+  background-color: #f0ffff;
+  text-align: center;
 }
 
 body#part .part-image {

@@ -52,8 +52,31 @@
                         <?php
                         if(isset($_SESSION['is_loggedin'])){ ?>
                             <li class="nav-item">
-                                <a class="nav-link" href="src/php/logout.php"><i class="fa-solid fa-fingerprint"></i>Logout</a>
+                                <!-- <a class="nav-link" href="src/php/logout.php"><i class="fa-solid fa-fingerprint"></i>Logout</a> -->
+                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Logout</button>
                             </li>
+                            <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog modal-lg">
+                                
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Logout?</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                    <p>Are you sure you want to log out?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <form action="src/php/logout.php" method="post">
+                                            <button type="submit" class="btn btn-default">Logout</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                
+                                </div>
+                            </div>
+
                         <?php } else {?>
                             <li class="nav-item">
                                 <a class="nav-link" href="index.php?p=login"><i class="fa-solid fa-fingerprint"></i>Login/Register</a>
