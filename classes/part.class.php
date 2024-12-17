@@ -30,4 +30,13 @@
                 "quantity" => $quantity,
             ]);
         }
+
+        public function getPartsByCategory($category){
+            $query = "SELECT * FROM parts WHERE category = :category";
+            $stmt = $this->Conn->prepare($query);
+            $stmt->execute([
+                "category" => $category
+            ]);
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
     }

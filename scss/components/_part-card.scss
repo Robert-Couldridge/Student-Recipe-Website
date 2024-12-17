@@ -1,10 +1,10 @@
 .part-card {
 margin: 0 0 30px 0;
 background-color: $white;
-box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.15);
+box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.15);
 padding: 12px;
 text-align: center;
-border: solid 1px $primary-azure;
+border: solid 1.5px $primary-dark-grey;
 border-radius: 3px;
 a {
     color: $primary-dark-grey;
@@ -21,6 +21,7 @@ a {
 }
 .part-card-image {
 height: 200px;
+width: 90%;
 background-repeat: no-repeat;
 background-position: center center;
 background-size: cover;
@@ -37,3 +38,4 @@ a {
     transform: translate(-50%, -50%);
     color: $primary-dark-grey;
 }
+

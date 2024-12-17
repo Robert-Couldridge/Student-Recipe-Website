@@ -9921,10 +9921,10 @@ footer p {
 .part-card {
   margin: 0 0 30px 0;
   background-color: #fff;
-  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.15);
   padding: 12px;
   text-align: center;
-  border: solid 1px #f0ffff;
+  border: solid 1.5px #181818;
   border-radius: 3px;
 }
 .part-card a {
@@ -9943,6 +9943,7 @@ footer p {
 
 .part-card-image {
   height: 200px;
+  width: 90%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -9966,6 +9967,7 @@ footer p {
   padding: 12px;
   text-align: center;
   border-radius: 3px;
+  border-bottom: 3px solid #f8b645;
 }
 .driver-card a {
   text-decoration: none;
@@ -10290,6 +10292,24 @@ body#part .part-order-form label {
 body#page-order .order-list {
   color: #fff;
   background-color: #181818;
+}
+
+body#page-formula1 .parts-container, #category .parts-container {
+  background-color: #fff;
+  padding-top: 5px;
+  border-radius: 3px;
+}
+body#page-formula1 .parts-container h2, body#page-formula1 .parts-container .h2, #category .parts-container h2, #category .parts-container .h2 {
+  color: #181818 !important;
+  padding-bottom: 5px;
+}
+body#page-formula1 .part-row, #category .part-row {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+body#page-formula1 .race-calendar-container, #category .race-calendar-container {
+  background-color: #181818;
+  border-radius: 3px;
 }
 
 * {

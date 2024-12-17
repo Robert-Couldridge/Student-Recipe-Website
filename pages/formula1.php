@@ -5,7 +5,7 @@ $Driver = new Driver($Conn);
 $drivers = $Driver->getDriversByDiscipline("Formula 1");
 ?>
 
-<body id="formula1">
+<body id="page-formula1">
 
     <div class="container">
         <h2>Formula 1 Drivers</h2>
@@ -24,22 +24,25 @@ $drivers = $Driver->getDriversByDiscipline("Formula 1");
         </div>
     </div>
     <div class="container">
-        <h2>Formula 1 Parts</h2>
+        <div class="parts-container">
+            <h2>Formula 1 Parts</h2>
 
-        <div class="row">
-            <?php foreach($parts as $part) { ?>
-                <div class="col-md-3">
-                    <div class="part-card">
-                        <a href="index.php?p=part&id=<?php echo $part['part_id']; ?>">
-                        <img class="part-card-image" src="./images/<?php echo $part['part_image'];?>">
-                        </a>
-                        <a href="index.php?p=part&id=<?php echo $part['part_id']; ?>"><h3><?php echo $part['part_name'];?></h3></a>
+            <div class="row part-row">
+                <?php foreach($parts as $part) { ?>
+                    <div class="col-md-3">
+                        <div class="part-card">
+                            <a href="index.php?p=part&id=<?php echo $part['part_id']; ?>">
+                            <img class="part-card-image" src="./images/parts/<?php echo $part['part_image'];?>">
+                            </a>
+                            <a href="index.php?p=part&id=<?php echo $part['part_id']; ?>"><h3><?php echo $part['part_name'];?></h3></a>
+                        </div>
                     </div>
-                </div>
-            <?php } ?>
+                <?php } ?>
+            </div>
         </div>
     </div>
-    <div class="container">
+    <br></br>
+    <div class="container race-calendar-container">
         <section id="next-race">
             <h2>Formula 1 Race Calendar</h2>
             <div class="next-race"></div>
