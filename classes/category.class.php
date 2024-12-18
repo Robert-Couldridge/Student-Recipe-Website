@@ -20,6 +20,7 @@
         $stmt->execute([
             "category_id" => $category_id
         ]);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $attempt = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $attempt[0]['category_name'];
     }
 }
