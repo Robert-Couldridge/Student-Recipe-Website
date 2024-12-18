@@ -87,3 +87,17 @@ h2{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.parts-container{
+    background-color: $white;
+    padding-top: 5px;
+    border-radius: 3px;
+    h2 {
+        color: $primary-dark-grey !important;
+        padding-bottom: 5px;
+    }
+}
+.part-row {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}

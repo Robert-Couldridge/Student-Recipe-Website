@@ -98,8 +98,8 @@
                             <a class="user-email"><i class="bi bi-person-fill"></i><?php echo $_SESSION['user_data']['email'];?></a>
                         <?php }
                         ?>
-                        <form action="search.html" method="get" class="search-form">
-                            <input class="form-control search-form-box" type="search" placeholder="Search" aria-label="Search">
+                        <form action="index.php?p=search" method="post" class="search-form">
+                            <input class="form-control search-form-box" type="search" placeholder="Search" aria-label="Search" name="query">
                             <button class="btn btn-outline-success ms-2" type="submit">Search</button>
                         </form>
                     </div>

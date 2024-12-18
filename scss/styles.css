@@ -10294,20 +10294,7 @@ body#page-order .order-list {
   background-color: #181818;
 }
 
-body#page-formula1 .parts-container, #category .parts-container {
-  background-color: #fff;
-  padding-top: 5px;
-  border-radius: 3px;
-}
-body#page-formula1 .parts-container h2, body#page-formula1 .parts-container .h2, #category .parts-container h2, #category .parts-container .h2 {
-  color: #181818 !important;
-  padding-bottom: 5px;
-}
-body#page-formula1 .part-row, #category .part-row {
-  margin-right: 0px !important;
-  margin-left: 0px !important;
-}
-body#page-formula1 .race-calendar-container, #category .race-calendar-container {
+body#page-formula1 .race-calendar-container {
   background-color: #181818;
   border-radius: 3px;
 }
@@ -10373,4 +10360,19 @@ h2, .h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.parts-container {
+  background-color: #fff;
+  padding-top: 5px;
+  border-radius: 3px;
+}
+.parts-container h2, .parts-container .h2 {
+  color: #181818 !important;
+  padding-bottom: 5px;
+}
+
+.part-row {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
 }/*# sourceMappingURL=styles.css.map */

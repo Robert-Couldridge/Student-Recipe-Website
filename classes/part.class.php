@@ -39,4 +39,13 @@
             ]);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
+
+        public function searchParts($query_string){
+            $query = "SELECT * FROM parts WHERE part_name LIKE :query_string";
+            $stmt = $this->Conn->prepare($query);
+            $stmt->execute([
+                "query_string" => "%$query_string%"
+            ]);
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
     }
