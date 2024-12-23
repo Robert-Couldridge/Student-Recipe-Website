@@ -8,7 +8,7 @@ $drivers = $Driver->getDriversByDiscipline("Formula 1");
 <body id="page-formula1">
 
     <div class="container">
-        <h2>Formula 1 Drivers</h2>
+        <h1>Formula 1 Drivers</h1>
 
         <div class="row">
             <?php foreach($drivers as $driver) { ?>
@@ -25,7 +25,7 @@ $drivers = $Driver->getDriversByDiscipline("Formula 1");
     </div>
     <div class="container">
         <div class="parts-container">
-            <h2>Formula 1 Parts</h2>
+            <h1>Formula 1 Parts</h1>
 
             <div class="row part-row">
                 <?php foreach($parts as $part) { ?>
@@ -44,7 +44,7 @@ $drivers = $Driver->getDriversByDiscipline("Formula 1");
     <br></br>
     <div class="container race-calendar-container">
         <section id="next-race">
-            <h2>Formula 1 Race Calendar</h2>
+            <h1>Formula 1 Race Calendar</h1>
             <div class="next-race"></div>
             <script src="src/js/next_race.js"></script>
         </section>

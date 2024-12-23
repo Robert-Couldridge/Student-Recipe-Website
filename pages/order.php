@@ -35,6 +35,10 @@
                     unset($_SESSION['order']);
                 }
             }
+            if(isset($_POST['cancel-order'])){
+                unset($_SESSION['order']);
+                echo '<meta http-equiv="refresh" content="0;url=index.php?p=order">';
+            }
         ?>
         <div class="row">
         <?php if(isset($_SESSION['order'])){ ?>
@@ -54,9 +58,18 @@
                     $_SESSION['order'][$part_name]['total_part_quantity'] = $total_part_quantity;
                     }?>
             </div>
-            <form class="order-submit-form" id="order-submit-form" method="post" action="">
-            <button type="submit" name="submit-order" value="1">Submit Order</button>
-            </form>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="order-submit-form" id="order-submit-form" method="post" action="">
+                    <button type="submit" name="submit-order" value="1">Submit Order</button>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form class="order-cancel-form" id="order-cancel-form" method="post" action="">
+                    <button type="submit" name="cancel-order" value="1">Cancel Order</button>
+                    </form>
+                </div>
+            </div>
         <?php } else {
             if(isset($_SESSION['is_loggedin'])){
             ?><h3 class="order-list">No items in order</h3><?php 

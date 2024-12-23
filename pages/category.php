@@ -8,7 +8,7 @@
 <body id="page-category">
     <div class="container">
         <div class="parts-container">
-            <h2><?php echo $category_name; ?></h2>
+            <h1><?php echo $category_name; ?></h1>
 
             <div class="row part-row">
                 <?php foreach($parts as $part) { ?>

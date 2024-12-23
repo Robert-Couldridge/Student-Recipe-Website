@@ -9813,47 +9813,66 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-header {
-  background-color: #a7001a;
-  color: #f0ffff;
-  padding: 1px 0;
-  text-align: center;
-}
-header .page-header-top {
-  padding: -200 -200 -200 0;
+h1, .h1 {
+  font-family: "Anton", sans-serif !important;
 }
 
-.email-search {
+h3, .h3 {
+  color: #040c0f;
+}
+
+header {
+  background-image: url(../images/ferrari-f1-75-2022.gif);
+  background-size: cover;
+  background-position: center;
+}
+header h1, header .h1, header h4, header .h4, header p {
+  text-shadow: 2px 2px 2px #040c0f;
+}
+header .page-header-top {
+  text-align: center;
+  color: #fff;
+}
+header .email-search {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
 }
-
-.user-email {
+header .user-email {
   align-items: center;
   color: #fff;
   order: 1;
 }
-
-.user-email:hover {
+header .user-email:hover {
   color: #f8b645;
 }
-
-.search-form {
+header .search-form {
   display: flex;
   justify-content: flex-end;
   width: 40%;
   order: 2;
   align-items: center;
 }
-
-.search-form-box {
+header .search-form-box {
   width: 80% !important;
 }
-
-.modal-content {
+header .modal-content {
   color: #181818;
+}
+header .tagline {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f0ffff;
+  text-align: center;
+  font-family: "Pinyon Script", cursive;
+  font-size: large !important;
+}
+header .tagline h4, header .tagline .h4 {
+  font-size: 30px;
 }
 
 header nav {
@@ -10277,6 +10296,9 @@ body#part .parts-information-table td {
   height: 80px;
   font-size: 2.2rem;
 }
+body#part h1, body#part .h1 {
+  color: #fff;
+}
 body#part h3, body#part .h3, body#part p {
   color: #f0ffff;
 }
@@ -10294,9 +10316,15 @@ body#page-order .order-list {
   background-color: #181818;
 }
 
+body#page-formula1 h1, body#page-formula1 .h1 {
+  color: #fff;
+}
 body#page-formula1 .race-calendar-container {
   background-color: #181818;
   border-radius: 3px;
+}
+body#page-formula1 .race-calendar-container h1, body#page-formula1 .race-calendar-container .h1 {
+  color: #fff;
 }
 
 * {
@@ -10304,32 +10332,8 @@ body#page-formula1 .race-calendar-container {
   padding: 0;
 }
 
-header {
-  background-image: url(../images/ferrari-f1-75-2022.gif);
-  background-size: cover;
-  background-position: center;
-}
-header h1, header .h1, header p {
-  text-shadow: 2px 2px 2px #040c0f;
-}
-
 body {
   background-color: #303030 !important;
-}
-
-h2, .h2 {
-  color: #f0ffff !important;
-}
-
-.hero {
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #f0ffff;
-  text-align: center;
-  font-family: "Pinyon Script", cursive;
 }
 
 .container {
@@ -10367,9 +10371,10 @@ h2, .h2 {
   padding-top: 5px;
   border-radius: 3px;
 }
-.parts-container h2, .parts-container .h2 {
+.parts-container h1, .parts-container .h1 {
   color: #181818 !important;
   padding-bottom: 5px;
+  padding-left: 5px;
 }
 
 .part-row {

@@ -59,7 +59,7 @@ class MailHandler {
                         $this->mail->Body .= "$quantity $part_name's ordered to $destination\n";
                     }
                     else{
-                        $this->mail->Body .= "Total $quantity\n------------\n";
+                        $this->mail->Body .= "------------\nTotal $quantity\n_________________\n";
                     }
                 }
             }

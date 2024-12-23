@@ -20,9 +20,9 @@
         <div class="page-header-top">
             <h1>Scuderia Ferrari Parts Store</h1>
             <p>tracking, ordering and specifications all in one place</p>
-            <a href="index.html"><img src="./images/ferrari-sf-logo-transparent-background.svg" alt="ferrari-sf-logo-transparent-background" width="300"  height="300"></a>
-            <section class="hero">
-                <h1>Born of the Spirit of Racing</h1>
+            <a href="index.php?p=home"><img src="./images/ferrari-sf-logo-transparent-background-centered.svg" alt="ferrari-sf-logo-transparent-background" width="350"  height="400"></a>
+            <section class="tagline">
+                <h4>Born of the Spirit of Racing</h4>
             </section>
         </div>
 

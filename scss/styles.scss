@@ -6,7 +6,7 @@
 @import "../node_modules/lightbox2/dist/css/lightbox.min.css";
 
 // Base
-
+@import "base/typography";
 
 // Layout
 @import "layout/header";
@@ -31,35 +31,15 @@
 
 
 
+
 * { 
     margin: 0;
     padding: 0;
-}
-header{
-    background-image: url(../images/ferrari-f1-75-2022.gif);
-    background-size: cover;
-    background-position: center;
-    h1, p {
-        text-shadow: 2px 2px 2px $primary-black;
-    }
 }
 
 body {
     background-color: $primary-light-grey !important;
 } 
-h2{
-    color: $primary-azure !important;
-}
-.hero {
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $primary-azure;
-    text-align: center;
-    font-family: "Pinyon Script", cursive;
-}
 
 .container {
     padding: 20px;
@@ -92,9 +72,10 @@ h2{
     background-color: $white;
     padding-top: 5px;
     border-radius: 3px;
-    h2 {
+    h1 {
         color: $primary-dark-grey !important;
         padding-bottom: 5px;
+        padding-left: 5px;
     }
 }
 .part-row {

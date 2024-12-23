@@ -62,7 +62,7 @@
             </div>
             <div class="col-md-6">
                 <div class="row">
-                    <h2><?php echo $part['part_name'];?></h2>
+                    <h1><?php echo $part['part_name'];?></h1>
                     <h3>Description</h3>
                     <p><?php echo $part['description'];?></p>
                 </div>

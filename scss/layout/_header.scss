@@ -1,12 +1,13 @@
 header {
-    .page-header-top {
-        padding: -200 -200 -200 0;
-        
+    background-image: url(../images/ferrari-f1-75-2022.gif);
+    background-size: cover;
+    background-position: center;
+    h1, h4, p {
+        text-shadow: 2px 2px 2px $primary-black;
     }
-    background-color: $primary-red;
-    color: $primary-azure;
-    padding: 1px 0;
-    text-align: center;
+    .page-header-top {   
+        text-align: center;
+        color: $white;
     }
     .email-search{
         display: flex;
@@ -36,3 +37,18 @@ header {
     .modal-content{
         color: $primary-dark-grey;
     }
+    .tagline {
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $primary-azure;
+        text-align: center;
+        font-family: "Pinyon Script", cursive;
+        font-size: large !important;
+        h4 {
+            font-size: 30px;
+        }
+    }
+}
