@@ -70,10 +70,10 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">Logout?</h4>
+                                    <h4 id="modal-title">Logout?</h4>
                                     </div>
                                     <div class="modal-body">
-                                    <p>Are you sure you want to log out?</p>
+                                    <p id="modal-text">Are you sure you want to log out?</p>
                                     </div>
                                     <div class="modal-footer">
                                         <form action="src/php/logout.php" method="post">

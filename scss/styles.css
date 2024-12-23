@@ -9859,6 +9859,11 @@ header .search-form-box {
 }
 header .modal-content {
   color: #181818;
+  text-align: center;
+}
+header .modal-content #modal-title, header .modal-content #modal-text {
+  text-shadow: none !important;
+  color: #181818 !important;
 }
 header .tagline {
   background-size: cover;

@@ -36,6 +36,11 @@ header {
     }
     .modal-content{
         color: $primary-dark-grey;
+        text-align: center;
+        #modal-title, #modal-text {
+            text-shadow: none !important;
+            color: $primary-dark-grey !important;
+        }
     }
     .tagline {
         background-size: cover;
