@@ -6,15 +6,21 @@
     <meta name="description" content="Easy, budget-friendly recipes for students. Learn to cook quick and healthy meals with simple ingredients.">
     <title>Scuderia Ferrari Parts Store</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="node_modules/lightbox2/src/css/lightbox.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a81ae266e9.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
 </head>
 <header>
         <div class="page-header-top">
@@ -55,13 +61,15 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php?p=order"><i class="fa-solid fa-cart-shopping"></i></i>Order</a>
+                            <a class="nav-link" href="index.php?p=calendar"><i class="bi bi-calendar2-week-fill"></i>Calendar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?p=order"><i class="fa-solid fa-cart-shopping"></i>Order</a>
                         </li>
                         <?php
                         if(isset($_SESSION['is_loggedin'])){ ?>
                             <li class="nav-item">
-                                <!-- <a class="nav-link" href="src/php/logout.php"><i class="fa-solid fa-fingerprint"></i>Logout</a> -->
-                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Logout</button>
+                                <button type="button" class="btn btn-outline-success ms-2" data-toggle="modal" data-target="#myModal">Logout</button>
                             </li>
                             <div class="modal fade" id="myModal" role="dialog">
                                 <div class="modal-dialog modal-lg">
@@ -69,8 +77,8 @@
                                 <!-- Modal content-->
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                                     <h4 id="modal-title">Logout?</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                                     </div>
                                     <div class="modal-body">
                                     <p id="modal-text">Are you sure you want to log out?</p>

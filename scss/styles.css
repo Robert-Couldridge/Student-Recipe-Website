@@ -9825,6 +9825,7 @@ header {
   background-image: url(../images/ferrari-f1-75-2022.gif);
   background-size: cover;
   background-position: center;
+  padding: 1px 0;
 }
 header h1, header .h1, header h4, header .h4, header p {
   text-shadow: 2px 2px 2px #040c0f;
@@ -10278,6 +10279,27 @@ body#page-home .home-text {
   background-color: #f0ffff;
   text-align: center;
 }
+body#page-home .home-image-container {
+  position: relative;
+  display: inline-block;
+}
+body#page-home .home-image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+body#page-home .overlay-text {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background to the text */
+  padding: 10px;
+  width: 90%;
+}
 
 body#part .part-image {
   width: 400px;
@@ -10311,6 +10333,7 @@ body#part .part-order-form {
   background-color: #181818;
   color: #181818;
   width: 80%;
+  padding: 10px;
 }
 body#part .part-order-form label {
   color: #fff;
@@ -10342,7 +10365,7 @@ body {
 }
 
 .container {
-  padding: 20px;
+  padding: 10px;
 }
 
 .recipes, .tips {
@@ -10385,4 +10408,15 @@ body {
 .part-row {
   margin-right: 0px !important;
   margin-left: 0px !important;
+}
+
+.btn-ferrari {
+  color: #f0ffff;
+  border-color: #f0ffff;
+}
+
+.btn-ferrari:hover {
+  color: #040c0f;
+  background-color: #f8b645;
+  border-color: #040c0f;
 }/*# sourceMappingURL=styles.css.map */

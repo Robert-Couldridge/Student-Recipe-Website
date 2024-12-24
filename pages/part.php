@@ -89,7 +89,7 @@
                     <label for="quantity">Quantity:</label>
                     <input type="number" id="quantity" name="quantity">
                     <br><br>
-                    <button type="submit" name="add-to-order" value="1">Add to Order</button>
+                    <button type="submit" class="btn-outline-success btn ms-2 btn-ferrari" name="add-to-order" value="1">Add to Order</button>
                 </form>
                 <?php } else {?>
                     <h3>log in to order parts</h3>

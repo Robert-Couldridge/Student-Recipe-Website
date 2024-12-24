@@ -25,6 +25,7 @@
 @import "pages/part";
 @import "pages/order";
 @import "pages/formula1";
+@import "pages/calendar";
 
 // Themes
 @import "themes/theme";
@@ -42,7 +43,7 @@ body {
 } 
 
 .container {
-    padding: 20px;
+    padding: 10px;
 }
 .recipes, .tips { 
     display: flex;
@@ -81,4 +82,14 @@ body {
 .part-row {
     margin-right: 0px !important;
     margin-left: 0px !important;
+}
+
+.btn-ferrari {
+    color: $primary-azure;
+    border-color: $primary-azure;
+}
+.btn-ferrari:hover {
+    color: $primary-black;
+    background-color: $primary-yellow;
+    border-color: $primary-black;
 }

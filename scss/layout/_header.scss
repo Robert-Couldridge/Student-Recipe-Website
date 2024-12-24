@@ -5,6 +5,7 @@ header {
     h1, h4, p {
         text-shadow: 2px 2px 2px $primary-black;
     }
+    padding: 1px 0;
     .page-header-top {   
         text-align: center;
         color: $white;
@@ -40,6 +41,7 @@ header {
         #modal-title, #modal-text {
             text-shadow: none !important;
             color: $primary-dark-grey !important;
+            text-align: center;
         }
     }
     .tagline {

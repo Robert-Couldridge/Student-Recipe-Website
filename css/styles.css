@@ -9813,14 +9813,73 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+h1, .h1 {
+  font-family: "Anton", sans-serif !important;
+}
+
+h3, .h3 {
+  color: #040c0f;
+}
+
 header {
-  background-color: #a7001a;
-  color: #f0ffff;
+  background-image: url(../images/ferrari-f1-75-2022.gif);
+  background-size: cover;
+  background-position: center;
   padding: 1px 0;
-  text-align: center;
+}
+header h1, header .h1, header h4, header .h4, header p {
+  text-shadow: 2px 2px 2px #040c0f;
 }
 header .page-header-top {
-  padding: -200 -200 -200 0;
+  text-align: center;
+  color: #fff;
+}
+header .email-search {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .user-email {
+  align-items: center;
+  color: #fff;
+  order: 1;
+}
+header .user-email:hover {
+  color: #f8b645;
+}
+header .search-form {
+  display: flex;
+  justify-content: flex-end;
+  width: 40%;
+  order: 2;
+  align-items: center;
+}
+header .search-form-box {
+  width: 80% !important;
+}
+header .modal-content {
+  color: #181818;
+  text-align: center;
+}
+header .modal-content #modal-title, header .modal-content #modal-text {
+  text-shadow: none !important;
+  color: #181818 !important;
+  text-align: center;
+}
+header .tagline {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f0ffff;
+  text-align: center;
+  font-family: "Pinyon Script", cursive;
+  font-size: large !important;
+}
+header .tagline h4, header .tagline .h4 {
+  font-size: 30px;
 }
 
 header nav {
@@ -9833,6 +9892,7 @@ header nav a {
   color: #f0ffff;
   margin: 0 4px;
   text-decoration: none;
+  font-size: small !important;
 }
 header nav a.nav-link {
   color: #f0ffff;
@@ -9877,7 +9937,7 @@ header nav ul li a i {
 }
 
 footer {
-  background-color: #a7001a;
+  background-color: #181818;
   color: #f0ffff;
   padding: 20px 0;
 }
@@ -9888,14 +9948,14 @@ footer p {
 .part-card {
   margin: 0 0 30px 0;
   background-color: #fff;
-  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.15);
   padding: 12px;
   text-align: center;
-  border: solid 1px #f0ffff;
+  border: solid 1.5px #181818;
   border-radius: 3px;
 }
 .part-card a {
-  color: #4d443d;
+  color: #181818;
   text-decoration: none;
 }
 .part-card a h3, .part-card a .h3 {
@@ -9910,6 +9970,7 @@ footer p {
 
 .part-card-image {
   height: 200px;
+  width: 90%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -9924,26 +9985,38 @@ footer p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #4d443d;
+  color: #181818;
 }
 
 .driver-card {
   margin: 0 0 30px 0;
-  background-color: #fff;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.15);
   padding: 12px;
   text-align: center;
-  border: solid 1px #f0ffff;
   border-radius: 3px;
+  border-bottom: 3px solid #f8b645;
 }
 .driver-card a {
-  color: #4d443d;
   text-decoration: none;
 }
 .driver-card a h3, .driver-card a .h3 {
-  font-size: 1.1rem;
-  padding-top: 10px;
+  font-size: 1.4rem;
+  padding-top: 20px;
   margin: 0;
+}
+
+.driver-card-f1 {
+  background-color: #fff;
+}
+.driver-card-f1 a {
+  color: #181818;
+}
+
+.driver-card-endurance {
+  background-color: #000;
+}
+.driver-card-endurance a {
+  color: #f0ffff;
 }
 
 .driver-card-image:hover {
@@ -9967,63 +10040,172 @@ footer p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #4d443d;
+  color: #181818;
 }
 
-body#page-login #login-h2, body#page-login #reg-h2 {
+body#page-login #login-h2, body#page-login #reg-h2, #page-email-confirm #login-h2, #page-email-confirm #reg-h2 {
   color: #f0ffff;
   margin-left: 20px;
   text-align: center;
 }
-body#page-login form label {
+body#page-login form label, #page-email-confirm form label {
   color: #f0ffff;
 }
-body#page-login #reg-form {
+body#page-login #reg-form, #page-email-confirm #reg-form {
   background-color: #f8b645;
   padding: 10px;
   border-radius: 1px;
   margin: 20px;
 }
-body#page-login #reg-form label {
-  color: #4d443d;
+body#page-login #reg-form label, #page-email-confirm #reg-form label {
+  color: #181818;
 }
-body#page-login #reg-form .btn {
-  background-color: #4d443d;
+body#page-login #reg-form .btn, #page-email-confirm #reg-form .btn {
+  background-color: #303030;
   color: #f8b645;
   border: 0;
   margin-top: 10px;
 }
-body#page-login #login-form {
+body#page-login #login-form, body#page-login #email-confirmation-form, #page-email-confirm #login-form, #page-email-confirm #email-confirmation-form {
   margin: 20px;
 }
-body#page-login #login-form .btn {
+body#page-login #login-form .btn, body#page-login #email-confirmation-form .btn, #page-email-confirm #login-form .btn, #page-email-confirm #email-confirmation-form .btn {
   background-color: #f0ffff;
   margin-top: 10px;
 }
-body#page-login .alert {
+body#page-login .alert, #page-email-confirm .alert {
   margin-top: 0;
   color: inherit;
 }
-body#page-login .alert-danger {
+body#page-login .alert-danger, #page-email-confirm .alert-danger {
   color: #a94442;
   background-color: #f2dede;
   border-color: #ebccd1;
 }
-body#page-login .alert-success {
+body#page-login .alert-success, #page-email-confirm .alert-success {
   color: #3c763d;
   background-color: #dff0d8;
   border-color: #d6e9c6;
 }
-body#page-login .alert-dismissible {
+body#page-login .alert-dismissible, #page-email-confirm .alert-dismissible {
   padding-left: 10px;
   padding-right: 10px;
 }
-body#page-login .alert-close {
+body#page-login .alert-close, #page-email-confirm .alert-close {
   float: right;
   position: relative;
   text-align: center;
   border: none;
   background-color: inherit;
+}
+body#page-login .modal, #page-email-confirm .modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+body#page-login .modal.fade .modal-dialog, #page-email-confirm .modal.fade .modal-dialog {
+  transform: translate(0, -25%);
+  transition: transform 0.3s ease-out;
+}
+body#page-login .modal.in .modal-dialog, #page-email-confirm .modal.in .modal-dialog {
+  transform: translate(0, 0);
+}
+body#page-login .modal-open, #page-email-confirm .modal-open {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body#page-login .modal-dialog, #page-email-confirm .modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+body#page-login .modal-content, #page-email-confirm .modal-content {
+  position: relative;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  outline: 0;
+}
+body#page-login .modal-backdrop, #page-email-confirm .modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+}
+body#page-login .modal-backdrop.fade, #page-email-confirm .modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+body#page-login .modal-backdrop.in, #page-email-confirm .modal-backdrop.in {
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+body#page-login .modal-header, #page-email-confirm .modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+body#page-login .modal-header .close, #page-email-confirm .modal-header .close {
+  margin-top: -2px;
+}
+body#page-login .modal-title, #page-email-confirm .modal-title {
+  margin: 0;
+  line-height: 1.42857143;
+}
+body#page-login .modal-body, #page-email-confirm .modal-body {
+  position: relative;
+  padding: 15px;
+}
+body#page-login .modal-footer, #page-email-confirm .modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+body#page-login .modal-footer .btn + .btn, #page-email-confirm .modal-footer .btn + .btn {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+body#page-login .modal-footer .btn-group .btn + .btn, #page-email-confirm .modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+body#page-login .modal-footer .btn-block + .btn-block, #page-email-confirm .modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+body#page-login .modal-scrollbar-measure, #page-email-confirm .modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+@media (min-width: 768px) {
+  body#page-login .modal-dialog, #page-email-confirm .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+  body#page-login .modal-content, #page-email-confirm .modal-content {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  body#page-login .modal-sm, #page-email-confirm .modal-sm {
+    width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  body#page-login .modal-lg, #page-email-confirm .modal-lg {
+    width: 900px;
+  }
 }
 
 body#page-endurance .hypercar-image {
@@ -10044,7 +10226,7 @@ body#page-endurance .hypercar-lightbox {
 
 body#driver .driver_full_length_image {
   height: 830px;
-  width: 600px;
+  width: 100%;
 }
 body#driver .driver-name {
   padding-bottom: 20px;
@@ -10059,7 +10241,7 @@ body#driver .driver-stats-list li {
 body#driver .driver-stats-table {
   color: #fff;
   font-size: 1.1rem;
-  background-color: #4d443d;
+  background-color: #181818;
   width: 80%;
   text-align: center;
 }
@@ -10071,48 +10253,122 @@ body#driver .driver-stats-table td {
   height: 80px;
   font-size: 2.2rem;
 }
+body#driver h3, body#driver .h3 {
+  color: #fff;
+}
+body#driver .specifications-list {
+  color: #fff;
+  background-color: #181818;
+  width: 50%;
+}
+body#driver .specification-form {
+  background-color: #181818;
+}
+body#driver .specification-form label, body#driver .specification-form p {
+  color: #fff;
+}
+body#driver .mechanic-comments {
+  background-color: #181818;
+  color: #fff;
+}
+
+body#page-home .home-image {
+  width: 100%;
+  height: auto;
+}
+body#page-home .home-text {
+  color: #181818;
+  background-color: #f0ffff;
+  text-align: center;
+}
+body#page-home .home-image-container {
+  position: relative;
+  display: inline-block;
+}
+body#page-home .home-image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+body#page-home .overlay-text {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background to the text */
+  padding: 10px;
+  width: 90%;
+}
+
+body#part .part-image {
+  width: 400px;
+  height: 400px;
+}
+body#part .part-name {
+  padding-bottom: 20px;
+}
+body#part .parts-information-table {
+  color: #fff;
+  font-size: 1.1rem;
+  background-color: #181818;
+  width: 80%;
+  text-align: center;
+}
+body#part .parts-information-table th {
+  height: 20px;
+  border-bottom: 1px solid #fff;
+}
+body#part .parts-information-table td {
+  height: 80px;
+  font-size: 2.2rem;
+}
+body#part h1, body#part .h1 {
+  color: #fff;
+}
+body#part h3, body#part .h3, body#part p {
+  color: #f0ffff;
+}
+body#part .part-order-form {
+  background-color: #181818;
+  color: #181818;
+  width: 80%;
+  padding: 10px;
+}
+body#part .part-order-form label {
+  color: #fff;
+}
+
+body#page-order .order-list {
+  color: #fff;
+  background-color: #181818;
+}
+
+body#page-formula1 h1, body#page-formula1 .h1 {
+  color: #fff;
+}
+
+body#page-calendar .race-calendar-container {
+  background-color: #181818;
+  border-radius: 3px;
+}
+body#page-calendar .race-calendar-container h1, body#page-calendar .race-calendar-container .h1 {
+  color: #fff;
+}
 
 * {
   margin: 0;
   padding: 0;
 }
 
-header {
-  background-image: url(../images/ferrari-f1-75-2022.gif);
-  background-size: cover;
-  background-position: center;
-}
-header h1, header .h1, header p {
-  text-shadow: 2px 2px 2px #040c0f;
-}
-
 body {
-  background-color: #040c0f;
-}
-
-h2, .h2 {
-  color: #f0ffff;
-}
-
-.hero {
-  background-image: url("hero-image.jpg"); /* Replace with a hero image */
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #f0ffff;
-  text-align: center;
-  font-family: "Pinyon Script", cursive;
-}
-
-.hero h1, .hero .h1 {
-  font-size: 2.5rem;
-  padding: 50px;
+  background-color: #303030 !important;
 }
 
 .container {
-  padding: 20px;
+  padding: 10px;
 }
 
 .recipes, .tips {
@@ -10125,7 +10381,7 @@ h2, .h2 {
   background-color: #fff;
   margin: 10px;
   padding: 20px;
-  width: 30%;
+  width: 30% !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -10141,27 +10397,29 @@ h2, .h2 {
   transform: translate(-50%, -50%);
 }
 
-/* these are there for activity 10 */
-.roboto-thin {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-style: normal;
+.parts-container {
+  background-color: #fff;
+  padding-top: 5px;
+  border-radius: 3px;
+}
+.parts-container h1, .parts-container .h1 {
+  color: #181818 !important;
+  padding-bottom: 5px;
+  padding-left: 5px;
 }
 
-.roboto-light {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+.part-row {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
 }
 
-.roboto-regular {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+.btn-ferrari {
+  color: #f0ffff;
+  border-color: #f0ffff;
 }
 
-.roboto-medium {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+.btn-ferrari:hover {
+  color: #040c0f;
+  background-color: #f8b645;
+  border-color: #040c0f;
 }
