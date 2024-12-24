@@ -9,6 +9,11 @@
                 $order_failed = false;
                 $_SESSION['order-email'] = $_SESSION['order'];
                 foreach($_SESSION['order'] as $part_name => $part_entry){
+                    if(isset($part_entry['stores'])){
+                        $number_to_stores = $part_entry['stores'];
+                        $Part->addPartsToStores($part_name, $number_to_stores);
+                        $part_entry['total_part_quantity'] = $part_entry['total_part_quantity'] - $number_to_stores;
+                    }
                     $attempt = $Part->orderParts($part_name, $part_entry['total_part_quantity']);
 
                     if($attempt){

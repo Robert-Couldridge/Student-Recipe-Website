@@ -31,6 +31,15 @@
             ]);
         }
 
+        public function addPartsToStores($part_name, $quantity){
+            $query = "UPDATE parts SET quantity_in_stores = quantity_in_stores + :quantity WHERE part_name = :part_name";
+            $stmt = $this->Conn->prepare($query);
+            return $stmt->execute([
+                "part_name" => $part_name,
+                "quantity" => $quantity,
+            ]);
+        }
+
         public function getPartsByCategoryId($category_id){
             $query = "SELECT * FROM parts WHERE category_id = :category_id";
             $stmt = $this->Conn->prepare($query);
