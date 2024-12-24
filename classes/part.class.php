@@ -57,4 +57,20 @@
             ]);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
+
+        public function updateTimestamp($part_name){
+            $query = "UPDATE parts SET last_change = :current_timestamp WHERE part_name = :part_name";
+            $stmt = $this->Conn->prepare($query);
+            return $stmt->execute([
+                "current_timestamp" => date('Y-m-d H:i:s'),
+                "part_name" => $part_name,
+            ]);
+        }
+
+        public function getLastOrderedParts(){
+            $query = "SELECT * FROM parts ORDER BY last_change DESC LIMIT 4";
+            $stmt = $this->Conn->prepare($query);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
     }

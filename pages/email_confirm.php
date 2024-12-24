@@ -32,6 +32,7 @@
                     if($User->loginUser($_SESSION['login_post'])){
                         $_SESSION['is_loggedin'] = true;
                         $_SESSION['user_data'] = $_SESSION['login_post'];
+                        $_SESSION['user_data']['user_level'] = $User->getUserLevel($_SESSION['login_post']['email']);
                         unset($_SESSION['login_post']);
                         echo '<meta http-equiv="refresh" content="0;url=index.php">';
                     } else {

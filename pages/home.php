@@ -1,3 +1,8 @@
+<?php
+$Part = new Part($Conn);
+$parts = $Part->getLastOrderedParts();
+?>
+
 <body id="page-home">
     <!-- Main Content -->
     <div class="container">
@@ -41,6 +46,22 @@
                             </div>
                             <div class="overlay-text">Welcome to the new Scuderia Ferrari parts store, please log in with your mechanic email to begin your order</div> 
                         </div>
+                    </div>
+                </div>
+                <div class="parts-container">
+                    <h1>Recently Ordered Parts</h1>
+
+                    <div class="row part-row">
+                        <?php foreach($parts as $part) { ?>
+                            <div class="col-md-3">
+                                <div class="part-card">
+                                    <a href="index.php?p=part&id=<?php echo $part['part_id']; ?>">
+                                    <img class="part-card-image" src="./images/parts/<?php echo $part['part_image'];?>">
+                                    </a>
+                                    <a href="index.php?p=part&id=<?php echo $part['part_id']; ?>"><h3><?php echo $part['part_name'];?></h3></a>
+                                </div>
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
             <!-- jQuery -->

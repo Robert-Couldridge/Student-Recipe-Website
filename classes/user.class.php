@@ -39,5 +39,15 @@
                 return false;
             }
         }
+
+        public function getUserLevel($user_email){
+            $query = "SELECT * FROM users WHERE user_email = :user_email";
+            $stmt = $this->Conn->prepare($query);
+            $stmt->execute([
+                "user_email" => $user_email
+            ]);
+            $attempt = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $attempt[0]['user_level'];
+        }
         
     }

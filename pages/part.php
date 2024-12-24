@@ -81,7 +81,7 @@
                 <form class="part-order-form" id="part-order-form" method="post" action="">
                     <label for="races">Destination:</label>
                     <select name="races" id="races">
-                        <?php if($_SESSION['user_data']['user_level'] = "lead mechanic"){?>
+                        <?php if($_SESSION['user_data']['user_level'] == "lead mechanic"){?>
                             <option value="stores">Stores</option>
                         <?php } ?>
                         <?php foreach($races as $race) {?>

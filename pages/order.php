@@ -12,11 +12,13 @@
                     if(isset($part_entry['stores'])){
                         $number_to_stores = $part_entry['stores'];
                         $Part->addPartsToStores($part_name, $number_to_stores);
+                        $Part->updateTimestamp($part_name);
                         $part_entry['total_part_quantity'] = $part_entry['total_part_quantity'] - $number_to_stores;
                     }
                     $attempt = $Part->orderParts($part_name, $part_entry['total_part_quantity']);
 
                     if($attempt){
+                        $Part->updateTimestamp($part_name);
                         unset($_SESSION['order'][$part_name]); 
                         ?>
                             <div class="alert alert-success alert-dismissible">
