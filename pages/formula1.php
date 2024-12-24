@@ -23,22 +23,4 @@ $drivers = $Driver->getDriversByDiscipline("Formula 1");
             <?php } ?>
         </div>
     </div>
-    <div class="container">
-        <div class="parts-container">
-            <h1>Formula 1 Parts</h1>
-
-            <div class="row part-row">
-                <?php foreach($parts as $part) { ?>
-                    <div class="col-md-3">
-                        <div class="part-card">
-                            <a href="index.php?p=part&id=<?php echo $part['part_id']; ?>">
-                            <img class="part-card-image" src="./images/parts/<?php echo $part['part_image'];?>">
-                            </a>
-                            <a href="index.php?p=part&id=<?php echo $part['part_id']; ?>"><h3><?php echo $part['part_name'];?></h3></a>
-                        </div>
-                    </div>
-                <?php } ?>
-            </div>
-        </div>
-    </div>
 </body>

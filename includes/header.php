@@ -46,9 +46,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?p=home"><i class="fa-solid fa-gauge-high"></i>Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php?p=formula1"><i class="fa-solid fa-oil-can"></i>Formula 1</a>
-                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-gas-pump"></i>Parts Categories</a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -59,6 +56,9 @@
                                     <a class="dropdown-item" href="index.php?p=category&id=<?php echo $category['category_id']?>"><?php echo $category['category_name']?></a>
                                 <?php } ?>
                             </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?p=formula1"><i class="fa-solid fa-oil-can"></i>Driver Specs</a>
+                        </li>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?p=calendar"><i class="bi bi-calendar2-week-fill"></i>Calendar</a>

@@ -4,6 +4,7 @@
     $parts = $Part->getPartById($part_id);
     $Race = new Race($Conn);
     $races = $Race->getRacesByDate("2024-08-01");
+    $Category = new Category($Conn);
 ?>
 <body id="part">
 <?php foreach($parts as $part) {?>
@@ -63,6 +64,9 @@
             <div class="col-md-6">
                 <div class="row">
                     <h1><?php echo $part['part_name'];?></h1>
+                    <a href="index.php?p=category&id=<?php echo $part['category_id']; ?>">
+                        <h2><?php echo $Category->getCategoryNameFromId($part['category_id']); ?></h2>
+                    </a>
                     <h3>Description</h3>
                     <p><?php echo $part['description'];?></p>
                 </div>

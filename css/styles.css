@@ -10296,7 +10296,7 @@ body#page-home .overlay-text {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 24px;
+  font-size: x-large;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background to the text */
   padding: 10px;
@@ -10304,8 +10304,9 @@ body#page-home .overlay-text {
 }
 
 body#part .part-image {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
 }
 body#part .part-name {
   padding-bottom: 20px;
