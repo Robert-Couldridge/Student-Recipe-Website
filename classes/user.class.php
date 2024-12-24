@@ -8,11 +8,12 @@
 
         public function createUser($user_data){
             $sec_password = password_hash($user_data['password'], PASSWORD_DEFAULT);
-            $query = "INSERT INTO users (user_email, user_pass) VALUES (:user_email, :user_pass)";
+            $query = "INSERT INTO users (user_email, user_pass, user_level) VALUES (:user_email, :user_pass, :user_level)";
             $stmt = $this->Conn->prepare($query);
             return $stmt->execute(array(
                 'user_email' => $user_data['email'],
-                'user_pass' => $sec_password
+                'user_pass' => $sec_password,
+                'user_level' => "mechanic"
             ));
         }
 
