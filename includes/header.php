@@ -94,8 +94,8 @@
                             </div>
 
                         <?php } else {?>
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.php?p=login"><i class="fa-solid fa-fingerprint"></i>Login/Register</a>
+                            <li class="nav-item nav-item-log-reg">
+                                <a class="nav-link nav-link-log-reg" href="index.php?p=login"><i class="fa-solid fa-fingerprint"></i>Login/Register</a>
                             </li>
                         <?php } 
                         ?>

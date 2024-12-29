@@ -19,6 +19,15 @@ header {
         a.nav-link:active {
             color: $primary-yellow;
         }
+        a.nav-link-log-reg {
+            color: $primary-dark-grey;
+        }
+        a.nav-link-log-reg:hover {
+            color: $primary-yellow;
+        }
+        .nav-item-log-reg {
+            background-color: $white;
+        }
         .navbar-brand {
             font-family: "Anton", sans-serif;
             font-weight: 400;

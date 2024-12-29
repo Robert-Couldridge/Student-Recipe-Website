@@ -30,16 +30,23 @@ function displayData(data){
 
         // Create a div for each race
         const raceDiv = document.createElement('div');
-        raceDiv.className = 'col-sm-4';
+        raceDiv.className = 'col-md-4';
+
+        // Create a card for each race
+        const raceCard = document.createElement('div');
+        raceCard.className = 'race-card';
 
         // Create an HTML structure for each race
-        raceDiv.innerHTML = `
+        raceCard.innerHTML = `
             <h3><a href="${race.url}" target="_blank">${race.raceName}</a></h3>
             <p><strong>Circuit:</strong> ${race.Circuit.circuitName}</p>
             <p><strong>Location:</strong> ${race.Circuit.Location.locality}, ${race.Circuit.Location.country}</p>
             <p><strong>Race Date:</strong> ${race.date} at ${race.time}</p>
             <p><strong>Qualifying:</strong> ${race.Qualifying.date} at ${race.Qualifying.time}</p>
             `;
+        
+        // Append the race card to the race div
+        raceDiv.append(raceCard);
 
         // Append the race div to the container
         raceRow.appendChild(raceDiv);
