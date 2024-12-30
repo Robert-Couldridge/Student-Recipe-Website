@@ -74,11 +74,11 @@ body {
 }
 
 .btn-ferrari {
-    color: $azure;
-    border-color: $azure;
+    color: $azure !important;
+    border-color: $azure !important;
 }
 .btn-ferrari:hover {
-    color: $primary-black;
-    background-color: $yellow;
-    border-color: $primary-black;
+    color: $primary-black !important;
+    background-color: $yellow !important;
+    border-color: $primary-black !important;
 }

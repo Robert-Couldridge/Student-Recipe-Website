@@ -10261,7 +10261,7 @@ body#driver .driver-stats-table td {
   height: 80px;
   font-size: 2.2rem;
 }
-body#driver h3, body#driver .h3 {
+body#driver h1, body#driver .h1, body#driver h3, body#driver .h3 {
   color: #fff;
 }
 body#driver .specifications-list {
@@ -10333,6 +10333,12 @@ body#part .parts-information-table th {
 body#part .parts-information-table td {
   height: 80px;
   font-size: 2.2rem;
+}
+body#part .part-category-link {
+  color: #f0ffff;
+}
+body#part .part-category-link:hover {
+  color: #f8b645;
 }
 body#part h1, body#part .h1 {
   color: #fff;
@@ -10420,12 +10426,12 @@ body {
 }
 
 .btn-ferrari {
-  color: #f0ffff;
-  border-color: #f0ffff;
+  color: #f0ffff !important;
+  border-color: #f0ffff !important;
 }
 
 .btn-ferrari:hover {
-  color: #040c0f;
-  background-color: #f8b645;
-  border-color: #040c0f;
+  color: #040c0f !important;
+  background-color: #f8b645 !important;
+  border-color: #040c0f !important;
 }

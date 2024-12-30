@@ -64,7 +64,7 @@
             <div class="col-md-6">
                 <div class="row">
                     <h1><?php echo $part['part_name'];?></h1>
-                    <a href="index.php?p=category&id=<?php echo $part['category_id']; ?>">
+                    <a class="part-category-link" href="index.php?p=category&id=<?php echo $part['category_id']; ?>">
                         <h2><?php echo $Category->getCategoryNameFromId($part['category_id']); ?></h2>
                     </a>
                     <h3>Description</h3>
@@ -96,7 +96,7 @@
                     <label for="quantity">Quantity:</label>
                     <input type="number" id="quantity" name="quantity">
                     <br><br>
-                    <button type="submit" class="btn-outline-success btn ms-2 btn-ferrari" name="add-to-order" value="1">Add to Order</button>
+                    <button type="submit" class="btn-ferrari btn-outline-success btn ms-2" name="add-to-order" value="1">Add to Order</button>
                 </form>
                 <?php } else {?>
                     <h3>log in to order parts</h3>

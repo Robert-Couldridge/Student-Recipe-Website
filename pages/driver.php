@@ -28,7 +28,7 @@ if(isset($_POST['submit-specification'])){
             </div>
             <div class="col-md-6">
                 <div class="row">
-                    <h2 class="driver-name"><?php echo $driver['name'];?></h2>
+                    <h1 class="driver-name"><?php echo $driver['name'];?></h1>
                     <ul class="driver-stats-list">
                         <li><i class="bi bi-calendar-event-fill"></i> Born: <?php echo $driver['born'];?></li>
                         <li><i class="bi bi-duffle"></i> Weight: <?php echo $driver['weight'];?>kg</li>

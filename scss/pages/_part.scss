@@ -22,6 +22,12 @@ body#part{
             font-size: 2.2rem;
         }
     }
+    .part-category-link{
+        color: $azure;
+    }
+    .part-category-link:hover{
+        color: $yellow;
+    }
     h1 {
         color: $white;
     }
