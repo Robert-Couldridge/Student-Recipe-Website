@@ -1,5 +1,5 @@
 // URL of the API endpoint
-const apiUrl = 'https://api.jolpi.ca/ergast/f1/2024/races'; // Sample API
+const apiUrl = 'https://api.jolpi.ca/ergast/f1/2024/races'; // F1 Calendar API
 
 // Function to fetch data from the API
 async function fetchData() {

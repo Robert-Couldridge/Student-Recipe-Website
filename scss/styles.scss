@@ -39,7 +39,7 @@
 }
 
 body {
-    background-color: $primary-light-grey !important;
+    background-color: $light-grey !important;
 } 
 
 .container {
@@ -63,7 +63,7 @@ body {
     padding-top: 5px;
     border-radius: 3px;
     h1 {
-        color: $primary-dark-grey !important;
+        color: $dark-grey !important;
         padding-bottom: 5px;
         padding-left: 5px;
     }
@@ -74,11 +74,11 @@ body {
 }
 
 .btn-ferrari {
-    color: $primary-azure;
-    border-color: $primary-azure;
+    color: $azure;
+    border-color: $azure;
 }
 .btn-ferrari:hover {
     color: $primary-black;
-    background-color: $primary-yellow;
+    background-color: $yellow;
     border-color: $primary-black;
 }

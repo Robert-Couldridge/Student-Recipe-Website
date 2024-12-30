@@ -4,7 +4,7 @@ box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.15);
 padding: 12px;
 text-align: center;
 border-radius: 3px;
-border-bottom: 3px solid $primary-yellow;
+border-bottom: 3px solid $yellow;
 a {
     text-decoration: none;
     h3 {
@@ -17,13 +17,13 @@ a {
 .driver-card-f1{
     background-color: $white;
     a {
-        color: $primary-dark-grey;
+        color: $dark-grey;
     }
 }
 .driver-card-endurance{
     background-color: $black;
     a {
-        color: $primary-azure;
+        color: $azure;
     }
 }
 .driver-card-image:hover{
@@ -46,5 +46,5 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: $primary-dark-grey;
+    color: $dark-grey;
 }

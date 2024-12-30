@@ -4,10 +4,10 @@ background-color: $white;
 box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.15);
 padding: 12px;
 text-align: center;
-border: solid 1.5px $primary-dark-grey;
+border: solid 1.5px $dark-grey;
 border-radius: 3px;
 a {
-    color: $primary-dark-grey;
+    color: $dark-grey;
     text-decoration: none;
     h3 {
     font-size: 1.1rem;
@@ -36,6 +36,6 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: $primary-dark-grey;
+    color: $dark-grey;
 }
 

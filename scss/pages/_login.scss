@@ -1,24 +1,24 @@
 body#page-login, #page-email-confirm{
     #login-h2, #reg-h2 {
-        color: $primary-azure;
+        color: $azure;
         margin-left: 20px;
         text-align: center;
     }
     form {
         label{
-            color: $primary-azure;
+            color: $azure;
         }
     }    
     #reg-form {
-        background-color: $primary-yellow;
+        background-color: $yellow;
         padding: 10px;
         border-radius: 1px;
         label {
-            color: $primary-dark-grey;
+            color: $dark-grey;
         }
         .btn {
-            background-color: $primary-light-grey;
-            color: $primary-yellow;
+            background-color: $light-grey;
+            color: $yellow;
             border: 0;
             margin-top: 10px;
         }
@@ -26,7 +26,7 @@ body#page-login, #page-email-confirm{
     }
     #login-form, #email-confirmation-form {
         .btn {
-            background-color: $primary-azure;
+            background-color: $azure;
             margin-top: 10px;
         }
         margin: 20px;

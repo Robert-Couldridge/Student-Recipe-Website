@@ -10,7 +10,7 @@ body#part{
     .parts-information-table{
         color: $white;
         font-size: 1.1rem;
-        background-color: $primary-dark-grey;
+        background-color: $dark-grey;
         width: 80%;
         text-align: center;
         th {
@@ -26,11 +26,11 @@ body#part{
         color: $white;
     }
     h3, p {
-        color: $primary-azure;
+        color: $azure;
     }
     .part-order-form{
-        background-color: $primary-dark-grey;
-        color: $primary-dark-grey;
+        background-color: $dark-grey;
+        color: $dark-grey;
         width: 80%;
         padding: 10px;
         label {

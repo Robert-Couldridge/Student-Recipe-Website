@@ -16,7 +16,7 @@ body#driver{
     .driver-stats-table {
         color: $white;
         font-size: 1.1rem;
-        background-color: $primary-dark-grey;
+        background-color: $dark-grey;
         width: 80%;
         text-align: center;
     }
@@ -33,17 +33,17 @@ body#driver{
     }
     .specifications-list{
         color: $white;
-        background-color: $primary-dark-grey;
+        background-color: $dark-grey;
         width: 50%;
     }
     .specification-form{
-        background-color: $primary-dark-grey;
+        background-color: $dark-grey;
         label, p {
             color:$white;
         }
     }
     .mechanic-comments{
-        background-color: $primary-dark-grey;
+        background-color: $dark-grey;
         color: $white;
     }
 }

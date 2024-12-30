@@ -5,25 +5,25 @@ header {
         justify-content: center;
         background-color: $primary-black;
         a {
-            color: $primary-azure;
+            color: $azure;
             margin: 0 4px;
             text-decoration: none;
             font-size: small !important;
         }
         a.nav-link {
-            color: $primary-azure;
+            color: $azure;
         }
         a.nav-link:hover {
-            color: $primary-yellow;
+            color: $yellow;
         }
         a.nav-link:active {
-            color: $primary-yellow;
+            color: $yellow;
         }
         a.nav-link-log-reg {
-            color: $primary-dark-grey;
+            color: $dark-grey;
         }
         a.nav-link-log-reg:hover {
-            color: $primary-yellow;
+            color: $yellow;
         }
         .nav-item-log-reg {
             background-color: $white;
@@ -32,21 +32,21 @@ header {
             font-family: "Anton", sans-serif;
             font-weight: 400;
             font-style: normal;
-            color: $primary-azure;
+            color: $azure;
         }     
         .navbar-brand:hover {
-            color: $primary-yellow;
+            color: $yellow;
         }
         .image-container {
             filter: invert(1);
         }
         .btn-outline-success {
-            color: $primary-azure;
-            border-color: $primary-azure;
+            color: $azure;
+            border-color: $azure;
         }
         .btn-outline-success:hover {
             color: $primary-black;
-            background-color: $primary-yellow;
+            background-color: $yellow;
             border-color: $primary-black;
         }
         .navbar-toggler, .navbar-toggler:focus, .navbar-toggler:active {
@@ -58,7 +58,7 @@ header {
         }
         ul li a i {
             margin-right: 4px;
-            color: $primary-yellow;
+            color: $yellow;
         }
 
     }

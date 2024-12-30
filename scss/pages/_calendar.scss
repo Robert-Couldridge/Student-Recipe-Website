@@ -1,6 +1,6 @@
 body#page-calendar{
     .race-calendar-container{
-        background-color: $primary-dark-grey;
+        background-color: $dark-grey;
         border-radius: 3px;
         h1 {
             color: $white;
@@ -12,8 +12,14 @@ body#page-calendar{
         box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.15);
         padding: 12px;
         text-align: center;
-        border: solid 1.5px $primary-dark-grey;
+        border: solid 1.5px $dark-grey;
         border-radius: 3px;
         height: 90%;
     }
 }
+
+
+
+
+
+
