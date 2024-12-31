@@ -15,7 +15,7 @@ $drivers = $Driver->getDriversByDiscipline("Formula 1");
                 <div class="col-md-6">
                     <div class="driver-card driver-card-f1">
                         <a href="index.php?p=driver&id=<?php echo $driver['driver_id']; ?>">
-                            <img class="driver-card-image" src="./images/<?php echo $driver['image'];?>">
+                            <img class="driver-card-image" src="./images/<?php echo $driver['image'];?>" alt="<?php echo $driver['name'];?>">
                         </a>
                         <a href="index.php?p=driver&id=<?php echo $driver['driver_id']; ?>"><h3><?php echo $driver['name'];?></h3></a>
                     </div>

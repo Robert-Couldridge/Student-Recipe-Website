@@ -69,7 +69,7 @@
                         <?php
                         if(isset($_SESSION['is_loggedin'])){ ?>
                             <li class="nav-item">
-                                <button type="button" class="btn btn-outline-success ms-2" data-toggle="modal" data-target="#myModal">Logout</button>
+                                <button type="button" class="btn btn-ferrari ms-2" data-toggle="modal" data-target="#myModal">Logout</button>
                             </li>
                             <div class="modal fade" id="myModal" role="dialog">
                                 <div class="modal-dialog modal-lg">

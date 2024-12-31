@@ -59,7 +59,7 @@
             ?>
         <div class="row">
             <div class="col-md-6">
-                <img class="part-image" src="./images/parts/<?php echo $part['part_image'];?>">
+                <img class="part-image" src="./images/parts/<?php echo $part['part_image'];?>" alt="<?php echo $part['part_name'];?>">
             </div>
             <div class="col-md-6">
                 <div class="row">
