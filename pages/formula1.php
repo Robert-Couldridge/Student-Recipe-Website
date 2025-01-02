@@ -11,6 +11,8 @@ $drivers = $Driver->getDriversByDiscipline("Formula 1");
         <h1>Formula 1 Drivers</h1>
 
         <div class="row">
+            
+            <!-- Display the driver cards  -->         
             <?php foreach($drivers as $driver) { ?>
                 <div class="col-md-6">
                     <div class="driver-card driver-card-f1">

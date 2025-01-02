@@ -1,4 +1,6 @@
 <footer class="text-center">
+
+        <!-- Sponsor logo images -->
         <div class="container">
                 <div class="row">
                         <div class="col-md-3">

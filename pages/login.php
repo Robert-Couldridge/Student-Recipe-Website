@@ -69,13 +69,13 @@
                         $_SESSION['email_confirmation_check'] = true;
                         $_SESSION['login_post'] = $_POST;
                         echo '<meta http-equiv="refresh" content="0;url=index.php?p=email_confirm">';
-                        // header("Location: index.php?p=email_confirm");
                     }
                 } 
             }
         ?>
         <div class="row">
             <div class="col-md-6">
+                <!-- login form -->
                 <h2 id="login-h2">Login</h2>
                 <form id="login-form" method="post" action="">
                     <div class="form-group">
@@ -90,6 +90,7 @@
                 </form>
             </div>
             <div class="col-md-6">
+                <!-- Registration form -->
                 <h2 id="reg-h2">Register</h2>
                 <form id="reg-form" method="post" action="">
                     <div class="form-group">

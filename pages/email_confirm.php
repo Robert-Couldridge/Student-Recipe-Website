@@ -8,8 +8,10 @@
 
                 // If the code matches check the action
 
+                // If the user is registering
                 if(isset($_SESSION['registration_post'])){
                     $attempt = $User->createUser($_SESSION['registration_post']);
+                    // reset variables to avoid form abuse
                     unset($_SESSION['email_confirmation_check']);
                     unset($_SESSION['registration_post']);
                     if($attempt){
@@ -27,12 +29,13 @@
                             </div>
                         <?php
                     }
-                } else if (isset($_SESSION['login_post'])){
+                } else if (isset($_SESSION['login_post'])){ // if the user is logging in
                     unset($_SESSION['email_confirmation_check']);
                     if($User->loginUser($_SESSION['login_post'])){
                         $_SESSION['is_loggedin'] = true;
                         $_SESSION['user_data'] = $_SESSION['login_post'];
                         $_SESSION['user_data']['user_level'] = $User->getUserLevel($_SESSION['login_post']['email']);
+                        // reset login_post variable and redirect user to avoid form abuse
                         unset($_SESSION['login_post']);
                         echo '<meta http-equiv="refresh" content="0;url=index.php">';
                     } else {
@@ -53,6 +56,8 @@
                 <?php
             }
         }
+    
+    // only display confirmation code form if during login process, protection against URL manipulation
     if(isset($_SESSION['email_confirmation_check'])){ ?> 
     <div class="container">
         <div class="row">

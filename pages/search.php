@@ -6,6 +6,8 @@
 <body id="page-search">
     <div class="container">
         <div class="parts-container">
+
+            <!-- Display the parts that match the search query  -->
             <h2>Search Results for "<?php echo $query_string;?>"</h2>
 
             <div class="row part-row">

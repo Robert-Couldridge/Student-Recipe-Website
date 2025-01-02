@@ -4,10 +4,9 @@ $parts = $Part->getLastOrderedParts();
 ?>
 
 <body id="page-home">
-    <!-- Main Content -->
     <div class="container">
 
-        <!-- Popular Recipes Section -->
+        <!-- Home page image carousel -->
         <section id="home">
                 <div class="row">
                     <div class="col-md-12">

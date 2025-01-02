@@ -19,6 +19,7 @@ if(isset($_POST['submit-specification'])){
 
 <body id="driver">
 
+<!-- Display the selected driver's information  -->
 <?php foreach($drivers as $driver) {?>
 
     <div class="container">
@@ -57,6 +58,8 @@ if(isset($_POST['submit-specification'])){
                         <li>Brake Bias <?php echo $brake_bias; ?></li>
                         <li>Differential Setting <?php echo $differential_setting; ?></li>
                     </ul>
+
+                    <!-- Form for updating driver specification, only visible if logged on -->
                     <div class="specification-form">
                         <?php if(isset($_SESSION['is_loggedin'])){?>
                             <form method="post" action="">

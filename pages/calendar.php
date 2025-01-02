@@ -4,6 +4,8 @@
         <section id="next-race">
             <h1>Formula 1 Race Calendar</h1>
             <div class="next-race"></div>
+            
+            <!-- Race Calendar API call -->
             <script src="src/js/next_race.js"></script>
         </section>
     </div>

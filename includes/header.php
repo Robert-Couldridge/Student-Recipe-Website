@@ -16,7 +16,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a81ae266e9.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- jQuery and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -24,6 +23,7 @@
     
 </head>
 <header>
+        <!-- Ferrari and website branding -->
         <div class="page-header-top">
             <h1>Scuderia Ferrari Parts Store</h1>
             <p>tracking, ordering and specifications all in one place</p>

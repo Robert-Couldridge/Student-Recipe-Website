@@ -11,6 +11,7 @@
             <h1><?php echo $category_name; ?></h1>
 
             <div class="row part-row">
+                <!-- fill container with cards representing each part in the category -->
                 <?php foreach($parts as $part) { ?>
                     <div class="col-md-3">
                         <div class="part-card">

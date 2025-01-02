@@ -10358,8 +10358,11 @@ body#part .part-order-form label {
 }
 
 body#page-order .order-list {
-  color: #fff;
+  color: #fff !important;
   background-color: #181818;
+}
+body#page-order .order-list h3, body#page-order .order-list .h3 {
+  color: #fff !important;
 }
 
 body#page-formula1 h1, body#page-formula1 .h1 {

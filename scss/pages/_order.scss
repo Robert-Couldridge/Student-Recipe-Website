@@ -1,6 +1,9 @@
 body#page-order{
     .order-list{
-        color: $white;
+        color: $white !important;
         background-color: $dark-grey;
+        h3 {
+            color: $white !important;
+        }
     }
 }

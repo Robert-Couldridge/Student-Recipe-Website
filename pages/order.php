@@ -51,6 +51,7 @@
         <?php if(isset($_SESSION['order'])){ ?>
             <div class="order-list">
                 <h2>Current Order</h2>
+                <!-- display parts in order -->
                 <?php foreach($_SESSION['order'] as $part_name => $part_entry) {
                     $total_part_quantity = 0;?>
                     <h3>Part Name: <?php echo $part_name;?></h3>
