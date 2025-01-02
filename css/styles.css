@@ -9937,6 +9937,7 @@ header nav .navbar-toggler, header nav .navbar-toggler:focus, header nav .navbar
   box-shadow: none;
 }
 header nav .navbar-toggler-icon {
+  background-image: var(--bs-navbar-toggler-icon-bg);
   filter: invert(1);
 }
 header nav ul li a i {
@@ -10304,7 +10305,7 @@ body#page-home .overlay-text {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: x-large;
+  font-size: 1.25em;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background to the text */
   padding: 10px;

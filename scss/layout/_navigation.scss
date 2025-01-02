@@ -54,6 +54,7 @@ header {
             box-shadow: none;
         }
         .navbar-toggler-icon {
+            background-image: var(--bs-navbar-toggler-icon-bg);
             filter: invert(1);
         }
         ul li a i {

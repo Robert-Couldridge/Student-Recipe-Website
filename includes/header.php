@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Easy, budget-friendly recipes for students. Learn to cook quick and healthy meals with simple ingredients.">
+    <meta name="description" content="tracking, ordering and specifications all in one place">
+    <link rel="icon" href="./images/ferrari-sf-logo-transparent-background-centered.svg" type="image/svg">
     <title>Scuderia Ferrari Parts Store</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="node_modules/lightbox2/src/css/lightbox.css">
